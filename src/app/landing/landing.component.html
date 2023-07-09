@@ -1,7 +1,44 @@
-<div class="wrapper">
-  <app-landing-header></app-landing-header>
-  <app-landing-main></app-landing-main>
-  <app-landing-footer></app-landing-footer>
-</div>
+<header>
+  <img class="logo" src="../../assets/img/logo-logo.svg" alt="" />
+  <nav>
+    <ul>
+      <li>О клубе</li>
+      <li>Цены</li>
+      <li>Характеристики</li>
+      <li>Игры</li>
+      <li>Контакты</li>
+    </ul>
+  </nav>
+  <div class="phone">
+    <a href="tel:+375445214449">+375 (44) 521-44-49</a>
+  </div>
+  <div class="working-time">24/7</div>
+</header>
+<main>
+  <h1>
+    <img src="../../assets/img/logo-text.svg" alt="" />
+    <span>Cyber Club</span>
+  </h1>
+  <a class="anchor-button" href="#">
+    <span *ngFor="let spans of buttonSpans"></span>
+    Start to play
+  </a>
+</main>
+<section class="about">
+  <div class="about-info">
+    <h2>Стань Частью Легендарного Киберспортивного Мира!</h2>
+    <span>
+      Новый подход к сфере киберспорта - это модный, уникальный интерьер,
+      потрясающая атмосфера, топовое железо и высококачественное обслуживание во
+      всех аспектах.
+      <br />
+      Тебя ждут 50 мощных пк, топ девайсы, две игровые зоны и все для комфортной
+      игры.
+      <br />
+      Наша цель - чтобы вы не просто посещали нас в качестве гостя, а стали
+      неотъемлемой частью нашего комьюнити.
+    </span>
+  </div>
+</section>
 
 <router-outlet></router-outlet>

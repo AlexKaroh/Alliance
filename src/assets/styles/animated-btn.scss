@@ -1,0 +1,86 @@
+.anchor-button {
+  z-index: 1;
+  position: relative;
+  display: inline-block;
+  padding: 15px 30px;
+  color: var(--text-color-h1);
+  font-family: "Jersey";
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  font-size: 24px;
+  overflow: hidden;
+  transition: 0.2s;
+  box-shadow: 0 0 5px #761ad9;
+  outline: 2px solid var(--text-color-h1);
+}
+
+.anchor-button:hover {
+  color: #741481;
+  background-color: #761ad9;
+  box-shadow: 0 0 10px #761ad9, 0 0 40px #761ad9, 0 0 10px #761ad9;
+  transition: .3;
+  transition-delay: 1s;
+  outline: none;
+}
+
+.anchor-button span {
+  position: absolute;
+  display: block;
+}
+
+.anchor-button span:nth-child(1) {
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #761ad9);
+}
+
+.anchor-button:hover span:nth-child(1) {
+  left: 100%;
+  transition: 1s;
+  transition-delay: 0.5s;
+}
+
+.anchor-button span:nth-child(3) {
+  bottom: 0;
+  right: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(270deg, transparent, #761ad9);
+}
+
+.anchor-button:hover span:nth-child(3) {
+  right: 100%;
+  transition: 1s;
+  transition-delay: 0.5s;
+}
+
+.anchor-button span:nth-child(2) {
+  top: -100%;
+  right: 0;
+  height: 100%;
+  width: 2px;
+  background: linear-gradient(180deg, transparent, #761ad9);
+}
+
+.anchor-button:hover span:nth-child(2) {
+  top: 100%;
+  transition: 1s;
+  transition-delay: 0.25s;
+}
+
+.anchor-button span:nth-child(4) {
+  bottom: -100%;
+  left: 0;
+  height: 100%;
+  width: 2px;
+  background: linear-gradient(360deg, transparent, #761ad9);
+}
+
+.anchor-button:hover span:nth-child(4) {
+  bottom: 100%;
+  transition: 1s;
+  transition-delay: 0.25s;
+}

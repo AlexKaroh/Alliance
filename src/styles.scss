@@ -1,3 +1,30 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700;800&display=swap");
+
+@font-face {
+  font-family: "Jersey";
+  src: url(./assets/fonts/Jersey.ttf);
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Clickuper";
+  src: url(./assets/fonts/Clickuper.ttf);
+  font-style: normal;
+  font-weight: normal;
+}
+
+:root {
+  --bg-color-body: #1e0033;
+  --bg-color-header: #000000d5;
+  --bg-color-about: #0f0f0f;
+  --bd-color-header: #741481;
+  --text-color-h1: #9a35ed;
+  --text-color-h2: #d8b5ff;
+  --text-color-nav: #fff;
+  --article-color-before: #9a35ed;
+}
+
 // indentation zeroing
 * {
   margin: 0;
@@ -5,9 +32,58 @@
 }
 
 body {
-  background-color: var(--bg-color-landing);
+  background-color: var(--bg-color-body);
+  font-family: "Inter", "Intro", sans-serif;
 }
 
-p {
-  color: white;
+br {
+  display: block;
+  content: "";
+  margin: 10px 0;
+}
+
+@keyframes neon {
+  0% {
+    box-shadow: 0 0 15px #741481, inset 0 0 0 #741481;
+  }
+
+  20% {
+    box-shadow: 0 0 15px #9a35ed, inset 0 0 0 #9a35ed;
+  }
+
+  40% {
+    box-shadow: 0 0 15px #741481, inset 0 0 0 #741481;
+  }
+
+  50% {
+    box-shadow: 0 0 15px #9a35ed, inset 0 0 0 #9a35ed;
+  }
+
+  55% {
+    box-shadow: 0 0 20px #741481, inset 0 0 0 #741481;
+  }
+
+  60% {
+    box-shadow: 0 0 20px #9a35ed, inset 0 0 0 #9a35ed;
+  }
+
+  61% {
+    box-shadow: 0 0 20px #741481, inset 0 0 0 #741481;
+  }
+
+  63% {
+    box-shadow: 0 0 20px #9a35ed, inset 0 0 0 #9a35ed;
+  }
+
+  65% {
+    box-shadow: 0 0 20px #741481, inset 0 0 0 #741481;
+  }
+
+  70% {
+    box-shadow: 0 0 20px #9a35ed, inset 0 0 0 #9a35ed;
+  }
+
+  to {
+    box-shadow: 0 0 15px #741481, inset 0 0 0 #741481;
+  }
 }

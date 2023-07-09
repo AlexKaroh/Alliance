@@ -1,20 +1,18 @@
-import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { Component, } from '@angular/core';
 import { RouterOutlet, RouterLink } from '@angular/router';
-import { LandingMainComponent } from './landing-main.component';
-import { LandingHeaderComponent } from './landing-header.component';
-import { LandingFooterComponent } from './landing-footer.component';
-
 @Component({
   selector: 'app-landing',
   standalone: true,
   imports: [
     RouterOutlet,
     RouterLink,
-    LandingHeaderComponent,
-    LandingMainComponent,
-    LandingFooterComponent,
+    CommonModule,
   ],
   templateUrl: './landing.component.html',
-  styleUrls: ['./landing.component.scss'],
+  styleUrls: ['./landing.component.scss', '../../assets/styles/animated-btn.scss', '../../assets/styles/adaptive.scss'],
 })
-export class LandingComponent {}
+export class LandingComponent {
+  public buttonSpans = Array(4);
+  public navLinks = []
+}

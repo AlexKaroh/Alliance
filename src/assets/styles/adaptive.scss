@@ -1,0 +1,26 @@
+@media (max-width: 1865px) {
+  header {
+    grid-template-columns: 6% 35% 12% 4% !important;
+  }
+}
+
+@media (max-width: 1550px) {
+  header {
+    grid-template-columns: 6% 35% 15% 5% !important;
+  }
+
+  main {
+    &::after {
+      width: 400px !important;
+      height: 73px !important;
+    }
+
+    > h1 {
+      &::after {
+        height: 25px !important;
+      }
+    }
+  }
+
+
+}

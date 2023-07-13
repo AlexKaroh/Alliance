@@ -1,0 +1,9 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 566 136" width="566" height="136">
+	<title>frame-1-svg</title>
+	<defs>
+		<image width="566" height="136" id="img1" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAjYAAACIAQMAAADOJzNaAAAAAXNSR0IB2cksfwAAAAZQTFRFAAAADw8PuRz/rAAAAAJ0Uk5TAP9bkSK1AAABU0lEQVR4nO3UsW0EMQxE0TUcOHQJLEWlsXEDtqTVZkfiBvyBA7KABwHzoeuS7uP39f1ozPUJOV+Q8w05BjkDchxyAkZ1onxUJ5pddaLZVccgZ0COQ07EiE44u+hEv4bqhPmITpiP6Bjk+P9y4tk1J55dc+LZNSeeXXMMcgbkOOTEjOQk+UhOko/kJPlITpKP5BjkOOQkjOJksytONrviZLMrTja74tg7TvroN+5x0kcLjkHOgByHnCLzOGnzgpM2LzjVfB6nms/jGOQMyHHIqTLHKedznHI+xynnc5xyPscxyBmQ45BTZm6nns/t1PO5nXo+t1PP53YMcgbkOOTUme0A+WwHyGc7QD7bAfLZjkHOgByHHIBZDpHPcoh8lkPksxwin+UY5AzIccghmOkg+UwHyWc6SD7TQfKZjkHOgByHHIRpp5122mmnnXbaaaeddhTnD47Wi0bPI0t9AAAAAElFTkSuQmCC"/>
+	</defs>
+	<style>
+	</style>
+	<use id="img1" href="#img1" transform="matrix(-1,0,0,-1,566,136)"/>
+</svg>

@@ -13,7 +13,6 @@
     padding: 10px 0;
     width: 100%;
     background-color: var(--bg-color-header);
-    border-bottom: 1px solid var(--bd-color-header);
     z-index: 1;
   }
 
@@ -34,7 +33,7 @@
     &::before {
       position: absolute;
       display: block;
-      content: '';
+      content: "";
       top: 0;
       width: 100%;
       height: 100%;
@@ -50,7 +49,7 @@
     &::after {
       position: absolute;
       display: block;
-      content: '';
+      content: "";
       right: 0;
       bottom: -2px;
       width: 440px;
@@ -81,7 +80,7 @@ header {
     &::before {
       position: relative;
       display: block;
-      content: '';
+      content: "";
       width: 22px;
       height: 22px;
     }
@@ -127,7 +126,7 @@ main {
     &::after {
       position: absolute;
       display: block;
-      content: '';
+      content: "";
       left: 0;
       bottom: -2px;
       width: 80%;
@@ -150,7 +149,7 @@ h1 {
     font-size: 1.5em;
     line-height: 5.5rem;
     color: var(--text-color-h1);
-    font-family: 'Jersey';
+    font-family: "Jersey";
   }
 
   > img {
@@ -170,32 +169,40 @@ h1 {
 }
 
 .about {
-  padding: 60px;
+  position: relative;
+  top: 0;
+  padding: 10vh;
+  height: 80vh;
   display: flex;
   justify-content: space-around;
-  align-items: center;
   background-color: var(--bg-color-about);
+  background-image: url(../../assets/img//plants-bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-blend-mode: difference;
+  overflow: hidden;
 }
 
 .about-info {
   position: relative;
-  font-family: 'Clickuper';
+  font-family: "Clickuper";
   color: var(--text-color-h2);
   width: 45%;
-  // background-image: url(../../assets/img/plants_bg.svg);
   background-size: cover;
+  align-self: start;
 
   > span {
-    font-size: 24px;
+    font-size: 1.75rem;
+    color: var(--text-color-span);
   }
 
   > h2 {
-    font-size: 45px;
+    font-size: 3rem;
     padding-bottom: 25px;
 
     &::before {
       display: inline-block;
-      content: '';
+      content: "";
       width: 25px;
       height: 35px;
       background-color: var(--article-color-before);
@@ -209,26 +216,270 @@ h1 {
 }
 
 .slider-container {
-  width: 1000px;
-  height: 500px;
+  height: 100%;
+  width: 100%;
+  padding-left: 5vh;
 }
 
 .prices {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   position: relative;
-  height: 100vh;
+  height: 80vh;
+  padding: 10vh 5vw;
   background: url(../../assets/img/bg_sky.svg) repeat;
   background-position: center top;
   background-attachment: fixed;
+  font-family: "Clickuper";
 
   &::before {
     position: absolute;
     display: block;
-    content: '';
+    content: "";
     left: 0;
-    top: 0;
+    top: -2px;
     width: 440px;
     height: 90px;
-    background-image: url(../../assets/img/frame-1-revert.svg);
+    background-image: url(../../assets/img/frame-1.svg);
+    transform: rotate(180deg);
+  }
+
+  > table {
+    &::before {
+      position: absolute;
+      display: block;
+      content: "";
+      right: 0;
+      top: 0;
+      width: 80%;
+      height: 35px;
+      background-image: url(../../assets/img/frame-2.svg);
+      transform: rotate(180deg);
+    }
+  }
+
+  > h2 {
+    position: relative;
+    font-size: 3rem;
+    color: var(--text-color-h2);
+
+    & span:first-child {
+      position: absolute;
+      text-shadow: -1px 0 0 var(--shadow-color-red),
+        1px 0 0 var(--shadow-color-blue);
+      visibility: hidden;
+      -webkit-animation: c 1.5s infinite;
+      animation: glitch 1.5s infinite;
+      -webkit-animation-timing-function: steps(1);
+      animation-timing-function: steps(1);
+    }
+
+    &::before {
+      display: inline-block;
+      content: "";
+      width: 25px;
+      height: 35px;
+      background-color: var(--article-color-before);
+      transform: skewX(-30deg);
+      top: 10px;
+      left: -50px;
+      letter-spacing: 1px;
+      margin-right: 20px;
+    }
+  }
+
+  > p {
+    font-size: 2.8rem;
+    color: var(--text-color-p);
+    text-align: center;
+
+    > span {
+      color: var(--text-color-subs);
+    }
+  }
+}
+
+.prices-table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0 1rem;
+  font-size: 2.6rem;
+  color: var(--text-color-span);
+}
+
+.price-row {
+  display: flex;
+  justify-content: space-evenly;
+  text-align: center;
+}
+
+td {
+  text-align: center;
+}
+
+.table-header {
+  > td {
+    color: var(--text-color-td);
+  }
+}
+
+.purple-td {
+  color: var(--text-color-ptd);
+}
+
+.plans-td {
+  padding-top: 10%;
+}
+
+.plan-time {
+  display: block;
+  color: var(--text-color-span);
+  font-size: 1.5rem;
+}
+
+.tr-border {
+  border-bottom: 1px solid var(--border-color-tr);
+}
+
+.td-green {
+  background-color: var(--bg-color-td);
+  color: var(--acitve-color-td);
+}
+
+.top-left-border {
+  -webkit-border-top-left-radius: 30px;
+  -moz-border-radius-topleft: 30px;
+  border-top-left-radius: 30px;
+}
+
+.top-right-border {
+  -webkit-border-top-right-radius: 30px;
+  -moz-border-radius-topright: 30px;
+  border-top-right-radius: 30px;
+}
+
+.bottom-left-border {
+  -webkit-border-bottom-left-radius: 30px;
+  -moz-border-radius-bottomleft: 30px;
+  border-bottom-left-radius: 30px;
+}
+
+.bottom-right-border {
+  -webkit-border-bottom-right-radius: 30px;
+  -moz-border-radius-bottomright: 30px;
+  border-bottom-right-radius: 30px;
+}
+
+.equipment {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 80vh;
+  padding: 10vh 5vw;
+  background-image: url(../../assets/img/red-plants-bg.png);
+  background-repeat: no-repeat;
+  background-size: 90%;
+  background-position: 200%;
+  background-blend-mode: difference;
+  background-color: var(--bg-color-equipment);
+  font-family: "Clickuper";
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background-color: var(--bd-color-equipment);
+    animation: neon 2s ease-in-out infinite;
+  }
+
+  > h2 {
+    position: relative;
+    font-size: 3rem;
+    color: var(--text-color-h2);
+
+    & span:first-child {
+      position: absolute;
+      text-shadow: -1px 0 0 var(--shadow-color-red),
+        1px 0 0 var(--shadow-color-blue);
+      visibility: hidden;
+      -webkit-animation: c 1.5s infinite;
+      animation: glitch 1.5s infinite;
+      -webkit-animation-timing-function: steps(1);
+      animation-timing-function: steps(1);
+    }
+
+    &::before {
+      display: inline-block;
+      content: "";
+      width: 25px;
+      height: 35px;
+      background-color: var(--article-color-before);
+      transform: skewX(-30deg);
+      top: 10px;
+      left: -50px;
+      letter-spacing: 1px;
+      margin-right: 20px;
+    }
+  }
+}
+
+.equipment-items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 5% 10px;
+  font-size: 2rem;
+  background-color: #000000f0;
+  border-radius: 10px;
+}
+
+.item {
+  display: flex;
+  flex-basis: 45%;
+  margin: 20px;
+}
+
+.item-img {
+  max-width: 8rem;
+}
+
+.item-info {
+  padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  color: var(--text-color-span);
+
+  & span:first-child {
+    color: var(--text-color-ptd);
+  }
+}
+
+.games {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  height: 80vh;
+  padding: 10vh 5vw;
+  background: url(../../assets/img/bg_sky.svg) repeat;
+  background-position: center top;
+  background-attachment: fixed;
+  font-family: "Clickuper";
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background-color: var(--bd-color-equipment);
+    animation: neon 2s ease-in-out infinite;
   }
 }

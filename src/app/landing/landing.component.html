@@ -14,6 +14,7 @@
   </div>
   <div class="working-time">24/7</div>
 </header>
+
 <main>
   <h1>
     <img src="../../assets/img/logo-text.svg" alt="" />
@@ -24,6 +25,7 @@
     Start to play
   </a>
 </main>
+
 <section class="about">
   <div class="about-info">
     <h2>Стань Частью Легендарного Киберспортивного Мира!</h2>
@@ -32,8 +34,8 @@
       потрясающая атмосфера, топовое железо и высококачественное обслуживание во
       всех аспектах.
       <br />
-      Тебя ждут 50 мощных пк, топ девайсы, две игровые зоны и все что нужно для комфортной
-      игры.
+      Тебя ждут 50 мощных пк, топ девайсы, две игровые зоны и все что нужно для
+      комфортной игры.
       <br />
       Наша цель - чтобы вы не просто посещали нас в качестве гостя, а стали
       неотъемлемой частью нашего комьюнити.
@@ -43,7 +45,125 @@
     <app-image-slider [slides]="slides"> </app-image-slider>
   </div>
 </section>
+
 <section class="prices">
+  <h2>
+    <span *ngFor="let spans of headlineSpans">Цены</span>
+  </h2>
+  <table class="prices-table">
+    <tbody>
+      <tr class="table-header">
+        <td rowspan="2"></td>
+        <td colspan="2">Общий зал</td>
+        <td></td>
+        <!-- Пустая ячейка -->
+        <td colspan="2">VIP</td>
+      </tr>
+      <tr class="purple-td">
+        <td>Будни</td>
+        <td>Выходные</td>
+        <td></td>
+        <!-- Пустая ячейка -->
+        <td>Будни</td>
+        <td>Выходные</td>
+      </tr>
+      <tr class="tr-border">
+        <td>1 Час</td>
+        <td>4</td>
+        <td>5</td>
+        <td></td>
+        <!-- Пустая ячейка -->
+        <td>5</td>
+        <td>6</td>
+      </tr>
+      <tr class="tr-border">
+        <td class="purple-td">3 Часа</td>
+        <td>10</td>
+        <td>12</td>
+        <td></td>
+        <!-- Пустая ячейка -->
+        <td class="td-green top-left-border">12</td>
+        <td class="td-green top-right-border">15</td>
+      </tr>
+      <tr class="tr-border">
+        <td>5 Часов</td>
+        <td>15</td>
+        <td>20</td>
+        <td></td>
+        <!-- Пустая ячейка -->
+        <td class="td-green">20</td>
+        <td class="td-green">25</td>
+      </tr>
+      <tr class="plans-td tr-border">
+        <td class="purple-td">
+          Утро
+          <span class="plan-time"> (08:00-12:00) </span>
+        </td>
+        <td class="td-green top-left-border">10</td>
+        <td class="td-green top-right-border">12</td>
+        <td></td>
+        <!-- Пустая ячейка -->
+        <td class="td-green">12</td>
+        <td class="td-green">14</td>
+      </tr>
+      <tr class="tr-border">
+        <td class="purple-td">
+          День
+          <span class="plan-time"> (13:00-18:00) </span>
+        </td>
+        <td class="td-green">15</td>
+        <td class="td-green">17</td>
+        <td></td>
+        <!-- Пустая ячейка -->
+        <td class="td-green">18</td>
+        <td class="td-green">22</td>
+      </tr>
+      <tr class="tr-border">
+        <td class="purple-td">
+          Ночь
+          <span class="plan-time"> (22:00-08:00) </span>
+        </td>
+        <td class="td-green">20</td>
+        <td class="td-green">25</td>
+        <td></td>
+        <!-- Пустая ячейка -->
+        <td class="td-green">25</td>
+        <td class="td-green">30</td>
+      </tr>
+      <tr>
+        <td class="purple-td">Сутки</td>
+        <td class="td-green bottom-left-border">40</td>
+        <td class="td-green bottom-right-border">50</td>
+        <td> </td>
+        <!-- Пустая ячейка -->
+        <td class="td-green bottom-left-border">40</td>
+        <td class="td-green bottom-right-border">50</td>
+      </tr>
+    </tbody>
+  </table>
+  <p>
+    К каждому пакету <span>зеленого</span> цвета энергетик <span>GORILLA в подарок</span>!
+  </p>
+</section>
+
+<section class="equipment">
+  <h2>
+    <span *ngFor="let spans of headlineSpans">Характеристики</span>
+  </h2>
+
+  <div class="equipment-items">
+    <div class="item" *ngFor="let item of equipmentItems">
+      <img class="item-img" src={{item.url}} alt="">
+      <div class="item-info">
+        <span>{{item.device}}</span>
+        <span>{{item.model}}</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="games">
 
 </section>
+
 <router-outlet></router-outlet>

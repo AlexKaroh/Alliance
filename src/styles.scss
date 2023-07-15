@@ -18,11 +18,23 @@
   --bg-color-body: #1e0033;
   --bg-color-header: #000000d5;
   --bg-color-about: #0f0f0f;
-  --bd-color-header: #741481;
+  --bg-color-equipment: #0f0f0f;
+  --bd-color-games: #741481;
+  --bd-color-equipment: #741481;
+  --text-color-td: #d8b5ff;
+  --text-color-span: #d8b5ff;
   --text-color-h1: #9a35ed;
-  --text-color-h2: #d8b5ff;
+  --text-color-ptd: #9a35ed;
+  --text-color-h2: #b371ff;
+  --border-color-tr: #9a35ed;
+  --text-color-p: #9a35ed;
   --text-color-nav: #fff;
   --article-color-before: #9a35ed;
+  --bg-color-td: #00ff003b;
+  --acitve-color-td: #81c427;
+  --shadow-color-red: #ff0000;
+  --shadow-color-blue: #0307ff;
+  --text-color-subs: #81c427;
 }
 
 // indentation zeroing
@@ -85,5 +97,63 @@ br {
 
   to {
     box-shadow: 0 0 15px #741481, inset 0 0 0 #741481;
+  }
+}
+
+@keyframes glitch {
+  0% {
+    clip-path: inset(20% -5px 60% 0);
+    transform: translate(-1px, 2px);
+    visibility: visible;
+  }
+
+  10% {
+    clip-path: inset(50% -5px 30% 0);
+    transform: translate(1px, -2px);
+  }
+
+  20% {
+    clip-path: inset(20% -5px 60% 0);
+    transform: translate(1px, 0px);
+  }
+
+  30% {
+    clip-path: inset(80% -5px 5% 0);
+    transform: translate(-3px, 2px);
+  }
+
+  40% {
+    clip-path: inset(0 -5px 80% 0);
+    transform: translate(0px, -1px);
+  }
+
+  50% {
+    clip-path: inset(50% -5px 30% 0);
+    transform: translate(-1px, -2px);
+  }
+
+  60% {
+    clip-path: inset(80% -5px 5% 0);
+    transform: translate(-3px, 2px);
+  }
+
+  70% {
+    clip-path: inset(0 -5px 80% 0);
+    transform: translate(0px, 1px);
+  }
+
+  80% {
+    clip-path: inset(50% -5px 30% 0);
+    transform: translate(1px, 1px);
+  }
+
+  90% {
+    clip-path: inset(20% -5px 60% 0);
+    transform: translate(2px, -2px);
+  }
+
+  100% {
+    clip-path: inset(0 -5px 80% 0);
+    transform: translate(-1px, 2px);
   }
 }

@@ -28,7 +28,9 @@
 
 <section class="about">
   <div class="about-info">
-    <h2>Стань Частью Легендарного Киберспортивного Мира!</h2>
+    <h2 class="header-text">
+      Стань Частью Легендарного Киберспортивного Мира!
+    </h2>
     <span>
       Новый подход к сфере киберспорта - это модный, уникальный интерьер,
       потрясающая атмосфера, топовое железо и высококачественное обслуживание во
@@ -47,7 +49,7 @@
 </section>
 
 <section class="prices">
-  <h2>
+  <h2 class="header-text glitched">
     <span *ngFor="let spans of headlineSpans">Цены</span>
   </h2>
   <table class="prices-table">
@@ -142,28 +144,61 @@
     </tbody>
   </table>
   <p>
-    К каждому пакету <span>зеленого</span> цвета энергетик <span>GORILLA в подарок</span>!
+    К каждому пакету <span>зеленого</span> цвета энергетик
+    <span>GORILLA в подарок</span>!
   </p>
 </section>
 
 <section class="equipment">
-  <h2>
+  <h2 class="header-text glitched">
     <span *ngFor="let spans of headlineSpans">Характеристики</span>
   </h2>
 
   <div class="equipment-items">
     <div class="item" *ngFor="let item of equipmentItems">
-      <img class="item-img" src={{item.url}} alt="">
+      <img class="item-img" src="{{ item.url }}" alt="{{ item.device }}" />
       <div class="item-info">
-        <span>{{item.device}}</span>
-        <span>{{item.model}}</span>
+        <span>{{ item.device }}</span>
+        <span>{{ item.model }}</span>
       </div>
     </div>
   </div>
 </section>
 
 <section class="games">
+  <h2 class="header-text glitched">
+    <span *ngFor="let spans of headlineSpans">Игры</span>
+  </h2>
 
+  <div class="games-slider">
+    <div class="game" *ngFor="let game of games">
+      <img class="game-img" src="{{ game.url }}" alt="{{ game.title }}" />
+      <span class="game-name">{{ game.title }}</span>
+    </div>
+  </div>
+</section>
+
+<section class="location">
+  <h2 class="header-text glitched">
+    <span *ngFor="let spans of headlineSpans">Контакты</span>
+  </h2>
+  <div class="location-container">
+    <div class="location-list">
+      <div class="info-item" *ngFor="let contact of contacts">
+        <img class="img-info" src="{{ contact.url }}" alt="" />
+        <span class="label-info">{{ contact.info }}</span>
+        <span class="contact-info">{{ contact.contact }}</span>
+      </div>
+    </div>
+    <div class="location-map">
+      <iframe
+        src="https://yandex.ru/map-widget/v1/?um=constructor%3A41a2aa690be3c1aaee8518ea50afbf29bd39309e07a4e068e9d153ab7a8658f5&amp;source=constructor"
+        width="1600"
+        height="490"
+        frameborder="0"
+      ></iframe>
+    </div>
+  </div>
 </section>
 
 <router-outlet></router-outlet>

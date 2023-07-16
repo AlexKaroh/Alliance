@@ -158,12 +158,41 @@ h1 {
   }
 }
 
-.frames {
-  > .frame-1 {
-    display: block;
-  }
+.glitched {
+  position: relative;
+  font-size: 3rem;
+  color: var(--text-color-h2);
 
-  > .frame-2 {
+  & span:first-child {
+    position: absolute;
+    text-shadow: -1px 0 0 var(--shadow-color-red),
+      1px 0 0 var(--shadow-color-blue);
+    visibility: hidden;
+    -webkit-animation: c 1.5s infinite;
+    animation: glitch 1.5s infinite;
+    -webkit-animation-timing-function: steps(1);
+    animation-timing-function: steps(1);
+  }
+}
+
+.header-text {
+  &::before {
+    display: inline-block;
+    content: "";
+    width: 25px;
+    height: 35px;
+    background-color: var(--article-color-before);
+    transform: skewX(-30deg);
+    top: 10px;
+    left: -50px;
+    letter-spacing: 1px;
+    margin-right: 20px;
+  }
+}
+
+.frames {
+  > .frame-1,
+  .frame-2 {
     display: block;
   }
 }
@@ -184,10 +213,14 @@ h1 {
 }
 
 .about-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
   position: relative;
   font-family: "Clickuper";
   color: var(--text-color-h2);
   width: 45%;
+  height: 100%;
   background-size: cover;
   align-self: start;
 
@@ -199,19 +232,6 @@ h1 {
   > h2 {
     font-size: 3rem;
     padding-bottom: 25px;
-
-    &::before {
-      display: inline-block;
-      content: "";
-      width: 25px;
-      height: 35px;
-      background-color: var(--article-color-before);
-      transform: skewX(-30deg);
-      top: 10px;
-      left: -50px;
-      letter-spacing: 1px;
-      margin-right: 20px;
-    }
   }
 }
 
@@ -256,36 +276,6 @@ h1 {
       height: 35px;
       background-image: url(../../assets/img/frame-2.svg);
       transform: rotate(180deg);
-    }
-  }
-
-  > h2 {
-    position: relative;
-    font-size: 3rem;
-    color: var(--text-color-h2);
-
-    & span:first-child {
-      position: absolute;
-      text-shadow: -1px 0 0 var(--shadow-color-red),
-        1px 0 0 var(--shadow-color-blue);
-      visibility: hidden;
-      -webkit-animation: c 1.5s infinite;
-      animation: glitch 1.5s infinite;
-      -webkit-animation-timing-function: steps(1);
-      animation-timing-function: steps(1);
-    }
-
-    &::before {
-      display: inline-block;
-      content: "";
-      width: 25px;
-      height: 35px;
-      background-color: var(--article-color-before);
-      transform: skewX(-30deg);
-      top: 10px;
-      left: -50px;
-      letter-spacing: 1px;
-      margin-right: 20px;
     }
   }
 
@@ -376,12 +366,12 @@ td {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  height: 80vh;
-  padding: 10vh 5vw;
+  height: 90vh;
+  padding: 5vh 5vw;
   background-image: url(../../assets/img/red-plants-bg.png);
   background-repeat: no-repeat;
-  background-size: 90%;
-  background-position: 200%;
+  background-size: 100%;
+  background-position: 10vw;
   background-blend-mode: difference;
   background-color: var(--bg-color-equipment);
   font-family: "Clickuper";
@@ -395,36 +385,6 @@ td {
     height: 4px;
     background-color: var(--bd-color-equipment);
     animation: neon 2s ease-in-out infinite;
-  }
-
-  > h2 {
-    position: relative;
-    font-size: 3rem;
-    color: var(--text-color-h2);
-
-    & span:first-child {
-      position: absolute;
-      text-shadow: -1px 0 0 var(--shadow-color-red),
-        1px 0 0 var(--shadow-color-blue);
-      visibility: hidden;
-      -webkit-animation: c 1.5s infinite;
-      animation: glitch 1.5s infinite;
-      -webkit-animation-timing-function: steps(1);
-      animation-timing-function: steps(1);
-    }
-
-    &::before {
-      display: inline-block;
-      content: "";
-      width: 25px;
-      height: 35px;
-      background-color: var(--article-color-before);
-      transform: skewX(-30deg);
-      top: 10px;
-      left: -50px;
-      letter-spacing: 1px;
-      margin-right: 20px;
-    }
   }
 }
 
@@ -463,10 +423,9 @@ td {
 .games {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   position: relative;
-  height: 80vh;
-  padding: 10vh 5vw;
+  height: 100vh;
+  padding: 5vh 5vw;
   background: url(../../assets/img/bg_sky.svg) repeat;
   background-position: center top;
   background-attachment: fixed;
@@ -482,4 +441,102 @@ td {
     background-color: var(--bd-color-equipment);
     animation: neon 2s ease-in-out infinite;
   }
+}
+
+.game {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  flex-basis: 20%;
+  margin: 10px;
+  transition: 0.3s;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+
+.games-slider {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.game-name {
+  font-size: 2rem;
+  color: var(--text-color-span);
+}
+
+.game-img {
+  max-width: 330px;
+  height: 100%;
+  border-radius: 10px;
+  filter: brightness(60%);
+  transition: 0.3s;
+
+  &:hover {
+    filter: brightness(100%);
+  }
+}
+
+.location {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 90vh;
+  padding: 5vh 5vw;
+  background-color: var(--bg-color-location);
+  font-family: "Clickuper";
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background-color: var(--bd-color-equipment);
+    animation: neon 2s ease-in-out infinite;
+  }
+}
+
+.label-info {
+  padding-left: 10px;
+  color: var(--text-color-p);
+}
+
+.contact-info {
+  color: var(--text-color-span);
+}
+
+.img-info {
+  width: 3rem;
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+}
+
+.location-map {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.location-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 100%;
+}
+
+.location-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 40%;
+  font-size: 2.5rem;
 }

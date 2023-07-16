@@ -4,6 +4,8 @@ import { RouterOutlet, RouterLink } from '@angular/router';
 import { SlideInterface } from '../../types/slide.interface';
 import { SliderComponent } from '../slider/slider.component';
 import { EquipmentItem } from 'src/types/equipment-item.interface';
+import { Game } from 'src/types/game.interface';
+import { Contact } from 'src/types/contact.interface';
 @Component({
   selector: 'app-landing',
   standalone: true,
@@ -32,14 +34,14 @@ export class LandingComponent {
       model: 'GIGABYTE G27F/G24F 165ГРЦ',
     },
     {
-      url: '../../assets/img/icons/processor.svg',
-      device: 'Процессор',
-      model: 'INTEL CORE I3-12100F',
-    },
-    {
       url: '../../assets/img/icons/videokarta.svg',
       device: 'Видеокарта',
       model: 'GEFORCE RTX 3050',
+    },
+    {
+      url: '../../assets/img/icons/processor.svg',
+      device: 'Процессор',
+      model: 'INTEL CORE I3-12100F',
     },
     {
       url: '../../assets/img/icons/ozu.svg',
@@ -47,9 +49,9 @@ export class LandingComponent {
       model: '8GB DDR4',
     },
     {
-      url: '../../assets/img/icons/headphones.svg',
-      device: 'Наушники',
-      model: 'HYPERX CLOUD 2',
+      url: '../../assets/img/icons/mouse.svg',
+      device: 'Мышь',
+      model: 'HYPERX PULSEFIRE HASTE',
     },
     {
       url: '../../assets/img/icons/keyboard.svg',
@@ -57,14 +59,51 @@ export class LandingComponent {
       model: 'RED SQUARE KEYROX TKL CLASSIC',
     },
     {
-      url: '../../assets/img/icons/mouse.svg',
-      device: 'Мышь',
-      model: 'HYPERX PULSEFIRE HASTE',
+      url: '../../assets/img/icons/headphones.svg',
+      device: 'Наушники',
+      model: 'HYPERX CLOUD 2',
     },
     {
       url: '../../assets/img/icons/chair.svg',
       device: 'Кресло',
       model: 'ZOMBIE WIKING AERO 5',
+    },
+  ];
+  public games: Game[] = [
+    { url: '../../assets/img/games/dota2.webp', title: 'Dota 2' },
+    { url: '../../assets/img/games/cs.webp', title: 'CS:GO' },
+    { url: '../../assets/img/games/fortnite.webp', title: 'Fortnite' },
+    { url: '../../assets/img/games/apex.webp', title: 'Apex' },
+    { url: '../../assets/img/games/valorant.webp', title: 'Valorant' },
+    { url: '../../assets/img/games/pubg.webp', title: 'PUBG' },
+    { url: '../../assets/img/games/gta.webp', title: 'GTA V' },
+    { url: '../../assets/img/games/wart.webp', title: 'War Thunder' },
+  ];
+  public contacts: Contact[] = [
+    {
+      info: 'Адрес : ',
+      contact: 'Метро Уручье , Ложинская 4 БЦ «Порт»',
+      url: '../../assets/img/location.svg',
+    },
+    {
+      info: 'Телефон : ',
+      contact: '+375445214449',
+      url: '../../assets/img/phone-contact.svg',
+    },
+    {
+      info: 'Telegram : ',
+      contact: '@alliancecyberclub',
+      url: '../../assets/img/tg.svg',
+    },
+    {
+      info: 'Instagram : ',
+      contact: '@alliance_cyber_club',
+      url: '../../assets/img/instagram.svg',
+    },
+    {
+      info: 'Время работы : ',
+      contact: 'Круглосуточно 24/7',
+      url: '../../assets/img/timer-contact.svg',
     },
   ];
 }

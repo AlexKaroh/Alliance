@@ -1,0 +1,22 @@
+<footer class="location">
+  <h2 class="header-text glitched">
+    <span *ngFor="let spans of headlineSpans">Контакты</span>
+  </h2>
+  <div class="location-container">
+    <div class="location-list">
+      <div class="info-item" *ngFor="let contact of contacts">
+        <img class="img-info" src="{{ contact.url }}" alt="" />
+        <span class="label-info">{{ contact.info }}</span>
+        <span class="contact-info">{{ contact.contact }}</span>
+      </div>
+    </div>
+    <div class="location-map">
+      <iframe
+        src="https://yandex.ru/map-widget/v1/?um=constructor%3A41a2aa690be3c1aaee8518ea50afbf29bd39309e07a4e068e9d153ab7a8658f5&amp;source=constructor"
+        width="1600"
+        height="490"
+        frameborder="0"
+      ></iframe>
+    </div>
+  </div>
+</footer>

@@ -1,0 +1,119 @@
+.prices {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  height: 80vh;
+  padding: 10vh 5vw;
+  background: url(../../assets/img/bg_sky.svg) repeat;
+  background-position: center top;
+  background-attachment: fixed;
+  font-family: 'Clickuper';
+
+  &::before {
+    position: absolute;
+    display: block;
+    content: '';
+    left: 0;
+    top: -2px;
+    width: 440px;
+    height: 90px;
+    background-image: url(../../assets/img/frame-1.svg);
+    transform: rotate(180deg);
+  }
+
+  > table {
+    &::before {
+      position: absolute;
+      display: block;
+      content: '';
+      right: 0;
+      top: 0;
+      width: 80%;
+      height: 35px;
+      background-image: url(../../assets/img/frame-2.svg);
+      transform: rotate(180deg);
+    }
+  }
+
+  > p {
+    font-size: 2.8rem;
+    color: var(--text-color-p);
+    text-align: center;
+
+    > span {
+      color: var(--text-color-subs);
+    }
+  }
+}
+
+.prices-table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0 1rem;
+  font-size: 2.6rem;
+  color: var(--text-color-span);
+}
+
+.price-row {
+  display: flex;
+  justify-content: space-evenly;
+  text-align: center;
+}
+
+td {
+  text-align: center;
+}
+
+.table-header {
+  > td {
+    color: var(--text-color-td);
+  }
+}
+
+.purple-td {
+  color: var(--text-color-ptd);
+}
+
+.plans-td {
+  padding-top: 10%;
+}
+
+.plan-time {
+  display: block;
+  color: var(--text-color-span);
+  font-size: 1.5rem;
+}
+
+.tr-border {
+  border-bottom: 1px solid var(--border-color-tr);
+}
+
+.td-green {
+  background-color: var(--bg-color-td);
+  color: var(--acitve-color-td);
+}
+
+.top-left-border {
+  -webkit-border-top-left-radius: 30px;
+  -moz-border-radius-topleft: 30px;
+  border-top-left-radius: 30px;
+}
+
+.top-right-border {
+  -webkit-border-top-right-radius: 30px;
+  -moz-border-radius-topright: 30px;
+  border-top-right-radius: 30px;
+}
+
+.bottom-left-border {
+  -webkit-border-bottom-left-radius: 30px;
+  -moz-border-radius-bottomleft: 30px;
+  border-bottom-left-radius: 30px;
+}
+
+.bottom-right-border {
+  -webkit-border-bottom-right-radius: 30px;
+  -moz-border-radius-bottomright: 30px;
+  border-bottom-right-radius: 30px;
+}

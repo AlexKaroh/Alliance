@@ -1,0 +1,59 @@
+.games {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  height: 90vh;
+  padding: 5vh 5vw;
+  background: url(../../assets/img/bg_sky.svg) repeat;
+  background-position: center top;
+  background-attachment: fixed;
+  font-family: 'Clickuper';
+
+  &::before {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background-color: var(--bd-color-equipment);
+    animation: neon 2s ease-in-out infinite;
+  }
+}
+
+.game {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  flex-basis: 20%;
+  margin: 10px;
+  transition: 0.3s;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+
+.games-slider {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.game-name {
+  font-size: 2rem;
+  color: var(--text-color-span);
+}
+
+.game-img {
+  max-width: 250px;
+  height: 80%;
+  border-radius: 10px;
+  filter: brightness(60%);
+  transition: 0.3s;
+
+  &:hover {
+    filter: brightness(100%);
+  }
+}

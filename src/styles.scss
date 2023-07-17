@@ -55,6 +55,36 @@ br {
   margin: 10px 0;
 }
 
+.glitched {
+  position: relative;
+  font-size: 2rem;
+  color: var(--text-color-h2);
+
+  & span:first-child {
+    position: absolute;
+    text-shadow: -1px 0 0 var(--shadow-color-red),
+      1px 0 0 var(--shadow-color-blue);
+    visibility: hidden;
+    -webkit-animation: c 1.5s infinite;
+    animation: glitch 1.5s infinite;
+    -webkit-animation-timing-function: steps(1);
+    animation-timing-function: steps(1);
+  }
+}
+
+.header-text {
+  &::before {
+    position: relative;
+    right: 15px;
+    display: inline-block;
+    content: "";
+    width: 20px;
+    height: 25px;
+    background-color: var(--article-color-before);
+    transform: skewX(-30deg);
+  }
+}
+
 @keyframes neon {
   0% {
     box-shadow: 0 0 15px #741481, inset 0 0 0 #741481;

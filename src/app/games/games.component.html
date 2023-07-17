@@ -1,0 +1,12 @@
+<section class="games">
+  <h2 class="header-text glitched">
+    <span *ngFor="let spans of headlineSpans">Игры</span>
+  </h2>
+
+  <div class="games-slider">
+    <div class="game" *ngFor="let game of games">
+      <img class="game-img" src="{{ game.url }}" alt="{{ game.title }}" />
+      <span class="game-name">{{ game.title }}</span>
+    </div>
+  </div>
+</section>

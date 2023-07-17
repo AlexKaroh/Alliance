@@ -1,0 +1,60 @@
+.location {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 90vh;
+  padding: 5vh 5vw;
+  background-color: var(--bg-color-location);
+  font-family: "Clickuper";
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background-color: var(--bd-color-equipment);
+    animation: neon 2s ease-in-out infinite;
+  }
+}
+
+.label-info {
+  padding-left: 10px;
+  color: var(--text-color-p);
+}
+
+.contact-info {
+  color: var(--text-color-span);
+}
+
+.img-info {
+  width: 3rem;
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+}
+
+.location-map {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.location-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 100%;
+}
+
+.location-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 40%;
+  font-size: 2rem;
+}

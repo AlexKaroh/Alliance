@@ -1,0 +1,15 @@
+<section class="equipment">
+  <h2 class="header-text glitched">
+    <span *ngFor="let spans of headlineSpans">Характеристики</span>
+  </h2>
+
+  <div class="equipment-items">
+    <div class="item" *ngFor="let item of equipmentItems">
+      <img class="item-img" src="{{ item.url }}" alt="{{ item.device }}" />
+      <div class="item-info">
+        <span>{{ item.device }}</span>
+        <span>{{ item.model }}</span>
+      </div>
+    </div>
+  </div>
+</section>

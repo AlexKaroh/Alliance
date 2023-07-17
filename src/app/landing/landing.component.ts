@@ -1,15 +1,35 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { RouterOutlet, RouterLink } from '@angular/router';
-import { SlideInterface } from '../../types/slide.interface';
-import { SliderComponent } from '../slider/slider.component';
-import { EquipmentItem } from 'src/types/equipment-item.interface';
-import { Game } from 'src/types/game.interface';
-import { Contact } from 'src/types/contact.interface';
+import { AboutComponent } from '../about/about.component';
+import { PricesComponent } from '../prices/prices.component';
+import { EquipmentComponent } from '../equipment/equipment.component';
+import { GamesComponent } from '../games/games.component';
+import { ContactsComponent } from '../contacts/contacts.component';
+import { ScrollAnchorDirective } from '../directives/scroll-anchor.directive';
+import { ScrollManagerDirective } from '../directives/scroll-manager.directive';
+import { ScrollSectionDirective } from '../directives/scroll-section.directive';
 @Component({
   selector: 'app-landing',
   standalone: true,
-  imports: [RouterOutlet, RouterLink, CommonModule, SliderComponent],
+  imports: [
+    RouterOutlet,
+    RouterLink,
+    CommonModule,
+    AboutComponent,
+    PricesComponent,
+    EquipmentComponent,
+    GamesComponent,
+    ContactsComponent,
+    ScrollAnchorDirective,
+    ScrollSectionDirective,
+    ScrollManagerDirective,
+  ],
+  providers: [
+    ScrollAnchorDirective,
+    ScrollSectionDirective,
+    ScrollManagerDirective,
+  ],
   templateUrl: './landing.component.html',
   styleUrls: [
     './landing.component.scss',
@@ -20,90 +40,4 @@ import { Contact } from 'src/types/contact.interface';
 export class LandingComponent {
   public buttonSpans = Array(4);
   public headlineSpans = Array(2);
-  public slides: SlideInterface[] = [
-    { url: '../../assets/img/slider/pc-places-dark.webp', title: 'PC' },
-    { url: '../../assets/img/slider/pc-places-small.webp', title: 'PC' },
-    { url: '../../assets/img/slider/pc-places.webp', title: 'PC' },
-    { url: '../../assets/img/slider/pc-places-radiant.webp', title: 'PC' },
-    { url: '../../assets/img/slider/pc-places-dire.webp', title: 'PC' },
-  ];
-  public equipmentItems: EquipmentItem[] = [
-    {
-      url: '../../assets/img/icons/monitor.svg',
-      device: 'Монитор',
-      model: 'GIGABYTE G27F/G24F 165ГРЦ',
-    },
-    {
-      url: '../../assets/img/icons/videokarta.svg',
-      device: 'Видеокарта',
-      model: 'GEFORCE RTX 3050',
-    },
-    {
-      url: '../../assets/img/icons/processor.svg',
-      device: 'Процессор',
-      model: 'INTEL CORE I3-12100F',
-    },
-    {
-      url: '../../assets/img/icons/ozu.svg',
-      device: 'Оперативная память',
-      model: '8GB DDR4',
-    },
-    {
-      url: '../../assets/img/icons/mouse.svg',
-      device: 'Мышь',
-      model: 'HYPERX PULSEFIRE HASTE',
-    },
-    {
-      url: '../../assets/img/icons/keyboard.svg',
-      device: 'Клавиатура',
-      model: 'RED SQUARE KEYROX TKL CLASSIC',
-    },
-    {
-      url: '../../assets/img/icons/headphones.svg',
-      device: 'Наушники',
-      model: 'HYPERX CLOUD 2',
-    },
-    {
-      url: '../../assets/img/icons/chair.svg',
-      device: 'Кресло',
-      model: 'ZOMBIE WIKING AERO 5',
-    },
-  ];
-  public games: Game[] = [
-    { url: '../../assets/img/games/dota2.webp', title: 'Dota 2' },
-    { url: '../../assets/img/games/cs.webp', title: 'CS:GO' },
-    { url: '../../assets/img/games/fortnite.webp', title: 'Fortnite' },
-    { url: '../../assets/img/games/apex.webp', title: 'Apex' },
-    { url: '../../assets/img/games/valorant.webp', title: 'Valorant' },
-    { url: '../../assets/img/games/pubg.webp', title: 'PUBG' },
-    { url: '../../assets/img/games/gta.webp', title: 'GTA V' },
-    { url: '../../assets/img/games/wart.webp', title: 'War Thunder' },
-  ];
-  public contacts: Contact[] = [
-    {
-      info: 'Адрес : ',
-      contact: 'Метро Уручье , Ложинская 4 БЦ «Порт»',
-      url: '../../assets/img/location.svg',
-    },
-    {
-      info: 'Телефон : ',
-      contact: '+375445214449',
-      url: '../../assets/img/phone-contact.svg',
-    },
-    {
-      info: 'Telegram : ',
-      contact: '@alliancecyberclub',
-      url: '../../assets/img/tg.svg',
-    },
-    {
-      info: 'Instagram : ',
-      contact: '@alliance_cyber_club',
-      url: '../../assets/img/instagram.svg',
-    },
-    {
-      info: 'Время работы : ',
-      contact: 'Круглосуточно 24/7',
-      url: '../../assets/img/timer-contact.svg',
-    },
-  ];
 }

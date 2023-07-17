@@ -1,0 +1,54 @@
+.about {
+  position: relative;
+  top: 0;
+  padding: 10vh;
+  height: 80vh;
+  display: flex;
+  justify-content: space-around;
+  background-color: var(--bg-color-about);
+  background-image: url(../../assets/img//plants-bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-blend-mode: difference;
+  overflow: hidden;
+}
+
+.about-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  position: relative;
+  font-family: 'Clickuper';
+  color: var(--text-color-h2);
+  width: 45%;
+  height: 100%;
+  background-size: cover;
+  align-self: start;
+
+  > span {
+    font-size: 1.65rem;
+    color: var(--text-color-span);
+  }
+
+  > h2 {
+    font-size: 2rem;
+    padding-bottom: 25px;
+
+    &::before {
+      position: relative;
+      top: 2px;
+      display: inline-block;
+      content: '';
+      width: 20px;
+      height: 25px;
+      background-color: var(--article-color-before);
+      transform: skewX(-30deg);
+    }
+  }
+}
+
+.slider-container {
+  height: 100%;
+  width: 100%;
+  padding-left: 5vh;
+}

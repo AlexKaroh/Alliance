@@ -42,7 +42,8 @@
         "plugin:@angular-eslint/template/accessibility"
       ],
       "rules": {
-        "@angular-eslint/template/no-negated-async": "off"
+        "@angular-eslint/template/no-negated-async": "off",
+        "@angular-eslint/use-lifecycle-interface" : "off"
       }
     }
   ]

@@ -1,3 +1,4 @@
+/* eslint-disable @angular-eslint/use-lifecycle-interface */
 import { Directive, ElementRef, Input } from '@angular/core';
 import { ScrollManagerDirective } from './scroll-manager.directive';
 

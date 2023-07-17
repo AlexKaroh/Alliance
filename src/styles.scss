@@ -1,14 +1,14 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700;800&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700;800&display=swap');
 
 @font-face {
-  font-family: "Jersey";
+  font-family: 'Jersey';
   src: url(./assets/fonts/Jersey.ttf);
   font-style: normal;
   font-weight: normal;
 }
 
 @font-face {
-  font-family: "Clickuper";
+  font-family: 'Clickuper';
   src: url(./assets/fonts/Clickuper.ttf);
   font-style: normal;
   font-weight: normal;
@@ -21,6 +21,7 @@
   --bg-color-equipment: #0f0f0f;
   --bg-color-location: #0f0f0f;
   --bd-color-games: #741481;
+  --bd-color-map: #761ad9;
   --bd-color-equipment: #741481;
   --text-color-td: #d8b5ff;
   --text-color-span: #d8b5ff;
@@ -46,12 +47,12 @@
 
 body {
   background-color: var(--bg-color-body);
-  font-family: "Inter", "Intro", sans-serif;
+  font-family: 'Inter', 'Intro', sans-serif;
 }
 
 br {
   display: block;
-  content: "";
+  content: '';
   margin: 10px 0;
 }
 
@@ -77,12 +78,31 @@ br {
     position: relative;
     right: 15px;
     display: inline-block;
-    content: "";
+    content: '';
     width: 20px;
     height: 25px;
     background-color: var(--article-color-before);
     transform: skewX(-30deg);
   }
+}
+
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+::-webkit-scrollbar-track {
+  width: 7px;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #780091;
+  border: none;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-track-piece {
+  background: #1e0033;
 }
 
 @keyframes neon {

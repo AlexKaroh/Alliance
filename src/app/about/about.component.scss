@@ -26,12 +26,13 @@
   align-self: start;
 
   > span {
-    font-size: 1.65rem;
+    font-family: 'Arturito';
+    font-size: 2rem;
     color: var(--text-color-span);
   }
 
   > h2 {
-    font-size: 2rem;
+    font-size: 3rem;
     padding-bottom: 25px;
 
     &::before {
@@ -39,8 +40,8 @@
       top: 2px;
       display: inline-block;
       content: '';
-      width: 20px;
-      height: 25px;
+      width: 2rem;
+      height: 2.4rem;
       background-color: var(--article-color-before);
       transform: skewX(-30deg);
     }

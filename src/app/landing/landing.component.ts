@@ -34,7 +34,6 @@ import { ScrollSectionDirective } from '../directives/scroll-section.directive';
   styleUrls: [
     './landing.component.scss',
     '../../assets/styles/animated-btn.scss',
-    '../../assets/styles/adaptive.scss',
   ],
 })
 export class LandingComponent {

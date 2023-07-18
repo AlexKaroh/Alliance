@@ -14,13 +14,15 @@
   <div class="phone">
     <a href="tel:+375445214449">+375 (44) 521-44-49</a>
   </div>
-  <div class="working-time">24/7</div>
+  <div class="working-time">
+    <span>24/7</span>
+  </div>
 </header>
 
 <main>
   <h1>
-    <img src="../../assets/img/logo-text.svg" alt="" />
-    <span>Cyber Club</span>
+    <img src="../../assets/img/logo-text.svg" alt="" style="display: none" />
+    <span style="display: none">Cyber Club</span>
   </h1>
   <a class="anchor-button" href="#">
     <span *ngFor="let spans of buttonSpans"></span>
@@ -30,12 +32,21 @@
 
 <app-about appScrollSection="about"></app-about>
 
-<app-prices [headlineSpans]="headlineSpans" appScrollSection="prices"></app-prices>
+<app-prices
+  [headlineSpans]="headlineSpans"
+  appScrollSection="prices"
+></app-prices>
 
-<app-equipment [headlineSpans]="headlineSpans" appScrollSection="equipment"></app-equipment>
+<app-equipment
+  [headlineSpans]="headlineSpans"
+  appScrollSection="equipment"
+></app-equipment>
 
 <app-games [headlineSpans]="headlineSpans" appScrollSection="games"></app-games>
 
-<app-contacts [headlineSpans]="headlineSpans" appScrollSection="contacts"></app-contacts>
+<app-contacts
+  [headlineSpans]="headlineSpans"
+  appScrollSection="contacts"
+></app-contacts>
 
 <router-outlet></router-outlet>

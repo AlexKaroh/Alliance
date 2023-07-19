@@ -2,7 +2,7 @@
 <!-- eslint-disable @angular-eslint/template/interactive-supports-focus -->
 <header>
   <img class="logo" src="../../assets/img/logo-logo.svg" alt="" />
-  <nav>
+  <nav *ngIf="screenWidth >= 1024">
     <ul>
       <li appScrollAnchor="about">О клубе</li>
       <li appScrollAnchor="prices">Цены</li>
@@ -11,10 +11,10 @@
       <li appScrollAnchor="contacts">Контакты</li>
     </ul>
   </nav>
-  <div class="phone">
+  <div class="phone" *ngIf="screenWidth >= 1024">
     <a href="tel:+375445214449">+375 (44) 521-44-49</a>
   </div>
-  <div class="working-time">
+  <div class="working-time" *ngIf="screenWidth >= 1024">
     <span>24/7</span>
   </div>
 </header>
@@ -34,6 +34,7 @@
 
 <app-prices
   [headlineSpans]="headlineSpans"
+  [screenWidth]="screenWidth"
   appScrollSection="prices"
 ></app-prices>
 

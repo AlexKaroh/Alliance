@@ -7,6 +7,7 @@
   padding: 5vh 5vw;
   background-color: var(--bg-color-location);
   font-family: 'Clickuper';
+  overflow: hidden;
 
   &::before {
     position: absolute;
@@ -30,7 +31,7 @@
 }
 
 .img-info {
-  width: 3rem;
+  width: 4.8rem;
 }
 
 .info-item {
@@ -63,5 +64,5 @@ iframe {
   flex-direction: column;
   justify-content: space-between;
   height: 40%;
-  font-size: 2rem;
+  font-size: 3.2rem;
 }

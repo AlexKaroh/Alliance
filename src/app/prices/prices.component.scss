@@ -3,8 +3,8 @@
   flex-direction: column;
   justify-content: space-between;
   position: relative;
-  height: 80vh;
   padding: 10vh 5vw;
+  height: 80vh;
   background: url(../../assets/img/bg_sky.svg) repeat;
   background-position: center top;
   background-attachment: fixed;
@@ -40,6 +40,7 @@
     font-size: 2.8rem;
     color: var(--text-color-p);
     text-align: center;
+    margin-top: 40px;
 
     > span {
       color: var(--text-color-subs);
@@ -49,9 +50,10 @@
 
 .prices-table {
   width: 100%;
+  height: 70%;
   border-collapse: collapse;
   border-spacing: 0 1rem;
-  font-size: 2.6rem;
+  font-size: 3rem;
   color: var(--text-color-span);
 }
 

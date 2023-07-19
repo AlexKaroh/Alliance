@@ -2,7 +2,6 @@
   display: flex;
   flex-direction: column;
   position: relative;
-  height: 90vh;
   padding: 5vh 5vw;
   background: url(../../assets/img/bg_sky.svg) repeat;
   background-position: center top;
@@ -42,7 +41,7 @@
 }
 
 .game-name {
-  font-size: 2rem;
+  font-size: 3.2rem;
   color: var(--text-color-span);
 }
 

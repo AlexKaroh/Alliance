@@ -1,26 +1,164 @@
-@media (max-width: 1865px) {
+@media (max-width: 1680px) {
   header {
-    grid-template-columns: 6% 35% 12% 4% !important;
-  }
-}
+    font-size: 1.4rem;
 
-@media (max-width: 1550px) {
-  header {
-    grid-template-columns: 6% 35% 15% 5% !important;
-  }
-
-  main {
-    &::after {
-      width: 400px !important;
-      height: 73px !important;
+    > .phone,
+    .working-time {
+      font-size: 1.4rem;
     }
+  }
 
-    > h1 {
-      &::after {
-        height: 25px !important;
+  .about-info {
+    > h2 {
+      font-size: 4rem;
+
+      &::before {
+        width: 2.3rem;
+        height: 3rem;
       }
     }
+
+    > span {
+      font-size: 2.8rem;
+    }
+  }
+}
+
+@media (max-width: 1366px) {
+  header {
+    grid-template-columns: 5% 45% 18% 6%;
+    font-size: 1.3rem;
+
+    > .phone,
+    .working-time {
+      font-size: 1.3rem;
+
+      &::before {
+        width: 16px;
+        height: 16px;
+      }
+    }
+    > .logo {
+      width: 4.4rem;
+    }
   }
 
+  .equipment-items {
+    font-size: 2rem;
+  }
 
+  .item {
+    flex-basis: 40%;
+  }
 }
+
+@media (max-width: 1024px) {
+  :host {
+    &::after {
+      display: none;
+    }
+
+    > main {
+      &::after {
+        width: 390px;
+        height: 70px;
+      }
+
+      h1 {
+        &::after {
+          height: 22px;
+        }
+      }
+    }
+
+    .prices {
+      height: auto;
+
+      &::before {
+        width: 390px;
+        height: 70px;
+      }
+
+      > .separate-tables {
+        &::before {
+          height: 22px;
+        }
+      }
+
+      > p {
+        margin-top: 60px;
+        font-size: 2.2rem;
+      }
+    }
+
+    .separate-tables {
+      display: block;
+
+      &::before {
+        position: absolute;
+        display: block;
+        content: '';
+        right: 0;
+        top: 0;
+        width: 80%;
+        height: 35px;
+        background-image: url(../../assets/img/frame-2.svg);
+        transform: rotate(180deg);
+      }
+
+      > table {
+        margin-top: 25px;
+      }
+    }
+
+  }
+
+  header {
+    clip-path: none;
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .item {
+    flex-basis: 50%;
+    margin: 20px 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .prices-table {
+    font-size: 2.5rem;
+  }
+
+  .equipment-items {
+    font-size: 1.6rem;
+  }
+
+  .glitched {
+    font-size: 3.8rem !important;
+  }
+
+  .header-text {
+    &::before {
+      width: 2.5rem !important;
+      height: 3.1rem !important;
+    }
+  }
+}
+
+@media (max-width: 636px) {
+  .prices-table {
+    font-size: 2rem;
+  }
+}
+// Маленький телефон (например, iPhone SE): @media (max-width: 320px)
+// Средний телефон (например, iPhone 6/7/8): @media (max-width: 375px)
+// Большой телефон (например, iPhone 6/7/8 Plus): @media (max-width: 414px)
+// Некоторые планшеты (например, iPad): @media (max-width: 768px)
+// Планшеты и некоторые небольшие ноутбуки:
+// Портретная ориентация планшета (например, iPad): @media (max-width: 1024px)
+// Альбомная ориентация планшета (например, iPad Pro): @media (max-width: 1366px)
+// Ноутбуки и настольные компьютеры:
+// Маленький ноутбук (например, MacBook Air): @media (max-width: 1440px)
+// Средний ноутбук (например, MacBook Pro 13"): @media (max-width: 1680px)
+// Большой ноутбук/монитор (например, iMac): @media (max-width: 1920px)

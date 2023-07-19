@@ -8,7 +8,7 @@ import { SlideInterface } from 'src/types/slide.interface';
   standalone: true,
   imports: [CommonModule],
   templateUrl: './slider.component.html',
-  styleUrls: ['./slider.component.scss'],
+  styleUrls: ['./slider.component.scss', '../../styles.scss'],
 })
 export class SliderComponent {
   @Input() slides: SlideInterface[] = [];

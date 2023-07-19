@@ -8,7 +8,7 @@ import { SliderComponent } from '../slider/slider.component';
   standalone: true,
   imports: [CommonModule, SliderComponent],
   templateUrl: './about.component.html',
-  styleUrls: ['./about.component.scss'],
+  styleUrls: ['./about.component.scss', '../../styles.scss'],
 })
 export class AboutComponent {
   public slides: SlideInterface[] = [

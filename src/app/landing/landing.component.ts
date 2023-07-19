@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { RouterOutlet, RouterLink } from '@angular/router';
 import { AboutComponent } from '../about/about.component';
 import { PricesComponent } from '../prices/prices.component';
@@ -34,9 +34,19 @@ import { ScrollSectionDirective } from '../directives/scroll-section.directive';
   styleUrls: [
     './landing.component.scss',
     '../../assets/styles/animated-btn.scss',
+    '../../styles.scss',
   ],
 })
-export class LandingComponent {
+export class LandingComponent implements OnInit {
   public buttonSpans = Array(4);
   public headlineSpans = Array(2);
+  screenWidth: number;
+
+  ngOnInit() {
+    this.screenWidth = window.screen.width;
+    window.onresize = () => {
+      this.screenWidth = window.screen.width;
+      console.log(this.screenWidth);
+    };
+  }
 }

@@ -7,7 +7,7 @@ import { Game } from 'src/types/game.interface';
   standalone: true,
   imports: [CommonModule],
   templateUrl: './games.component.html',
-  styleUrls: ['./games.component.scss']
+  styleUrls: ['./games.component.scss', '../../styles.scss']
 })
 export class GamesComponent {
   @Input() headlineSpans: void[];

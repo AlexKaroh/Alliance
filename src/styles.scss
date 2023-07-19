@@ -1,10 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700;800&display=swap');
 @import '/src/assets/styles/vars';
-@import '/src/assets/styles/adaptive';
 @import '/src/assets/styles/fonts';
 @import '/src/assets/styles//animations';
+@import '/src/assets/styles/adaptive';
 
-// indentation zeroing
+html {
+  font-size: 10px;
+}
 
 * {
   margin: 0;
@@ -24,7 +25,7 @@ br {
 
 .glitched {
   position: relative;
-  font-size: 3rem;
+  font-size: 4.8rem;
   color: var(--text-color-h2);
 
   & span:first-child {
@@ -37,6 +38,10 @@ br {
     -webkit-animation-timing-function: steps(1);
     animation-timing-function: steps(1);
   }
+
+  & span:last-child {
+    text-shadow: #9a00b95d 30px -10px;
+  }
 }
 
 .header-text {
@@ -46,8 +51,8 @@ br {
     right: 15px;
     display: inline-block;
     content: '';
-    width: 2rem;
-    height: 2.4rem;
+    width: 3.2rem;
+    height: 3.84rem;
     background-color: var(--article-color-before);
     transform: skewX(-30deg);
     margin-right: 25x;

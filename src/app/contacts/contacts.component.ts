@@ -7,7 +7,7 @@ import { Contact } from 'src/types/contact.interface';
   standalone: true,
   imports: [CommonModule],
   templateUrl: './contacts.component.html',
-  styleUrls: ['./contacts.component.scss'],
+  styleUrls: ['./contacts.component.scss', '../../styles.scss'],
 })
 export class ContactsComponent {
   @Input() headlineSpans: void[];

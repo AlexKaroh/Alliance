@@ -7,7 +7,7 @@ import { EquipmentItem } from 'src/types/equipment-item.interface';
   standalone: true,
   imports: [CommonModule],
   templateUrl: './equipment.component.html',
-  styleUrls: ['./equipment.component.scss'],
+  styleUrls: ['./equipment.component.scss', '../../styles.scss'],
 })
 export class EquipmentComponent {
   @Input() headlineSpans: void[];

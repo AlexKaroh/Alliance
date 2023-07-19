@@ -27,12 +27,12 @@
 
   > span {
     font-family: 'Arturito';
-    font-size: 2rem;
+    font-size: 3.2rem;
     color: var(--text-color-span);
   }
 
   > h2 {
-    font-size: 3rem;
+    font-size: 4.8rem;
     padding-bottom: 25px;
 
     &::before {
@@ -40,8 +40,8 @@
       top: 2px;
       display: inline-block;
       content: '';
-      width: 2rem;
-      height: 2.4rem;
+      width: 3.2rem;
+      height: 3.84rem;
       background-color: var(--article-color-before);
       transform: skewX(-30deg);
     }
@@ -49,7 +49,7 @@
 }
 
 .slider-container {
-  height: 100%;
   width: 100%;
   padding-left: 5vh;
+  align-self: center;
 }

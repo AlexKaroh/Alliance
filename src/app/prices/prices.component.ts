@@ -6,8 +6,9 @@ import { CommonModule } from '@angular/common';
   standalone: true,
   imports: [CommonModule],
   templateUrl: './prices.component.html',
-  styleUrls: ['./prices.component.scss'],
+  styleUrls: ['./prices.component.scss', '../../styles.scss'],
 })
 export class PricesComponent {
   @Input() headlineSpans: void[];
+  @Input() screenWidth: number;
 }

@@ -17,6 +17,12 @@
   <div class="working-time" *ngIf="screenWidth >= 1024">
     <span>24/7</span>
   </div>
+  <div class="hamburger-container" *ngIf="screenWidth < 1024">
+    <input id="menu-toggle" type="checkbox"/>
+    <label for="menu-toggle" class="hamburger">
+      <span class="line"></span>
+    </label>
+  </div>
 </header>
 
 <main>

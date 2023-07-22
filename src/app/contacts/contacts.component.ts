@@ -11,30 +11,31 @@ import { Contact } from 'src/types/contact.interface';
 })
 export class ContactsComponent {
   @Input() headlineSpans: void[];
+
   public contacts: Contact[] = [
     {
-      info: 'Адрес : ',
-      contact: 'Метро Уручье , Ложинская 4 БЦ «Порт»',
+      info: 'Адрес',
+      contact: ' Уручье , Ложинская 4 БЦ «Порт»',
       url: '../../assets/img/location.svg',
     },
     {
-      info: 'Телефон : ',
-      contact: '+375445214449',
+      info: 'Телефон',
+      contact: ' +375445214449',
       url: '../../assets/img/phone-contact.svg',
     },
     {
-      info: 'Telegram : ',
-      contact: '@alliancecyberclub',
+      info: 'Telegram',
+      contact: ' @alliancecyberclub',
       url: '../../assets/img/tg.svg',
     },
     {
-      info: 'Instagram : ',
-      contact: '@alliance_cyber_club',
+      info: 'Instagram',
+      contact: ' @alliance_cyber_club',
       url: '../../assets/img/instagram.svg',
     },
     {
-      info: 'Время работы : ',
-      contact: 'Круглосуточно 24/7',
+      info: 'Время работы',
+      contact: ' Круглосуточно 24/7',
       url: '../../assets/img/timer-contact.svg',
     },
   ];

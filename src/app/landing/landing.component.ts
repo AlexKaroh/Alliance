@@ -43,10 +43,9 @@ export class LandingComponent implements OnInit {
   screenWidth: number;
 
   ngOnInit() {
-    this.screenWidth = window.screen.width;
+    this.screenWidth = window.innerWidth;
     window.onresize = () => {
-      this.screenWidth = window.screen.width;
-      console.log(this.screenWidth);
+      this.screenWidth = window.innerWidth;
     };
   }
 }

@@ -3,11 +3,11 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  height: 90vh;
   padding: 5vh 5vw;
+  min-height: 90vh;
   background-image: url(../../assets/img/red-plants-bg.webp);
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-size: cover;
   background-position: 10vw;
   background-blend-mode: difference;
   background-color: var(--bg-color-equipment);
@@ -31,10 +31,9 @@
   align-self: center;
   justify-content: center;
   margin-top: 12vh;
-  padding: 10px 0;
+  padding: 10px 2.5rem;
   width: 80%;
-  height: 60%;
-  font-size: 2.4rem;
+  font-size: 3.2rem;
   background-color: #000000bb;
   border-radius: 10px;
 }
@@ -46,7 +45,7 @@
 }
 
 .item-img {
-  max-width: 6rem;
+  max-width: 10rem;
 }
 
 .item-info {

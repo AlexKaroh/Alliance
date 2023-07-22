@@ -1,12 +1,18 @@
-<!-- eslint-disable @angular-eslint/template/click-events-have-key-events -->
-<!-- eslint-disable @angular-eslint/template/interactive-supports-focus -->
+<!-- eslint-disable @angular-eslint/template/elements-content -->
 <div class="slider">
-  <div>
-    <div (click)="goToPrevious()" class="leftArrow">❰</div>
-    <div (click)="goToNext()" class="rightArrow">❱</div>
+  <button (click)="goToPrevious()" class="left-arrow">
+    <img src="../../assets/img/slider/left-arrow.svg" alt="">
+  </button>
+  <button (click)="goToNext()" class="right-arrow">
+    <img src="../../assets/img/slider/right-arrow.svg" alt="">
+  </button>
+  <div class="slider-line" #sliderLine>
+    <img
+      *ngFor="let slide of slides"
+      class="slide"
+      src="{{ slide.url }}"
+      alt="{{ slide.title }}"
+      draggable="false"
+    />
   </div>
-  <div
-    class="slide"
-    [ngStyle]="{ 'background-image': getCurrentSlideUrl() }"
-  ></div>
 </div>

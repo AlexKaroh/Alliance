@@ -60,11 +60,11 @@ br {
 }
 
 ::-webkit-scrollbar {
-  width: 7px;
+  width: 5px;
 }
 
 ::-webkit-scrollbar-track {
-  width: 7px;
+  width: 5px;
   border-radius: 10px;
 }
 
@@ -75,5 +75,5 @@ br {
 }
 
 ::-webkit-scrollbar-track-piece {
-  background: #1e0033;
+  background: var(--bg-color-body);
 }

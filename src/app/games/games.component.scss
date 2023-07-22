@@ -6,11 +6,11 @@
   background: url(../../assets/img/bg_sky.svg) repeat;
   background-position: center top;
   background-attachment: fixed;
-  font-family: 'Clickuper';
+  font-family: "Clickuper";
 
   &::before {
     position: absolute;
-    content: '';
+    content: "";
     top: 0;
     left: 0;
     width: 100%;
@@ -41,6 +41,7 @@
 }
 
 .game-name {
+  text-align: center;
   font-size: 3.2rem;
   color: var(--text-color-span);
 }

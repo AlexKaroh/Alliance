@@ -226,40 +226,119 @@
     margin: 20px 0;
   }
 
-  .hamburger-container {
-    padding-right: 20px;
+  .hamburger {
+    position: relative;
+    margin-right: 20px;
     width: 3rem;
     height: 2rem;
+    z-index: 5;
+    cursor: pointer;
 
-    > input {
-      display: none;
+    &:hover {
+      filter: brightness(1.1);
     }
 
-    > .hamburger {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex-direction: column;
+    &::before,
+    &::after,
+    span {
+      position: absolute;
+      display: block;
+      content: "";
       width: 100%;
-      height: 100%;
-      transition: 0.3s;
+      height: 2px;
+      background: linear-gradient(180deg, #761ad9, #811cec, #912aff);
+      transition: all 0.2s ease 0s;
+    }
 
-      &:hover {
-        filter: brightness(1.1);
-      }
+    &::before {
+      top: 0;
+    }
 
-      &::before,
-      &::after,
-      span {
-        display: block;
-        content: "";
+    &::after {
+      bottom: 0;
+    }
+
+    span {
+      top: 50%;
+      transform: scale(1) translate(0px, -50%);
+      background: linear-gradient(180deg, #761ad9, #811cec);
+    }
+  }
+
+  .hamburger.active {
+    &::before {
+      top: 50%;
+      transform: rotate(-45deg) translate(0px, -50%);
+    }
+
+    &::after {
+      bottom: 50%;
+      transform: rotate(45deg) translate(0px, 50%);
+    }
+
+    span {
+      transform: scale(0) translate(0px, -50%);
+    }
+  }
+
+  .hamburger-body {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 40%;
+    height: 100%;
+    transition: all 0.5s ease 0s;
+    background-color: #000000d0;
+    right: -100%;
+  }
+
+  .hamburger-body.active {
+    right: 0;
+  }
+
+  .hamburger-list {
+    flex-direction: column;
+    padding-top: 45px;
+    overflow: auto;
+    font-size: 2.5rem;
+
+    > a {
+      padding: 1.5rem 0;
+      border-top: 1px solid #ffffff3b;
+      border-bottom: 1px solid #ffffff3b;
+      color: #fff;
+      text-decoration: none;
+      font-size: 2.3rem;
+      text-align: center;
+    }
+
+    > a + a {
+      border-top: none;
+    }
+
+    > ul {
+      display: block;
+    }
+
+    > li {
+      padding: 1rem 2rem;
+    }
+  }
+
+  .social-links {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1.5rem 0;
+    border-bottom: 1px solid #ffffff3b;
+    border-top: 1px solid #ffffff3b;
+
+    > a {
+      height: 3rem;
+      width: 3rem;
+
+      > img {
         width: 100%;
-        height: 2px;
-        background: linear-gradient(180deg, #761ad9, #811cec, #912aff);
-      }
-
-      span {
-        background: linear-gradient(180deg, #761ad9, #811cec);
       }
     }
   }

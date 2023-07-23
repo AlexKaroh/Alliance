@@ -3,12 +3,8 @@
 <header>
   <img class="logo" src="../../assets/img/logo-logo.svg" alt="" />
   <nav *ngIf="screenWidth >= 1024">
-    <ul>
-      <li appScrollAnchor="about">О клубе</li>
-      <li appScrollAnchor="prices">Цены</li>
-      <li appScrollAnchor="equipment">Характеристики</li>
-      <li appScrollAnchor="games">Игры</li>
-      <li appScrollAnchor="contacts">Контакты</li>
+    <ul *ngFor="let navItem of navList">
+      <li appScrollAnchor="{{ navItem.anchor }}">{{ navItem.label }}</li>
     </ul>
   </nav>
   <div class="phone" *ngIf="screenWidth >= 1024">
@@ -17,12 +13,35 @@
   <div class="working-time" *ngIf="screenWidth >= 1024">
     <span>24/7</span>
   </div>
-  <div class="hamburger-container" *ngIf="screenWidth < 1024">
-    <input id="menu-toggle" type="checkbox"/>
-    <label for="menu-toggle" class="hamburger">
-      <span class="line"></span>
-    </label>
+  <div
+    class="hamburger"
+    *ngIf="screenWidth < 1024"
+    [class.active]="activateBurger"
+    (click)="toggleHamburger()"
+  >
+    <span class="line"></span>
   </div>
+  <nav
+    class="hamburger-body"
+    *ngIf="screenWidth < 1024"
+    [class.active]="activateBurger"
+  >
+    <ul class="hamburger-list" (click)="disableHamburger()">
+      <li
+        *ngFor="let navItem of navList"
+        appScrollAnchor="{{ navItem.anchor }}"
+      >
+        {{ navItem.label }}
+      </li>
+      <a href="tel:+375445214449"> +375 (44) 521-44-49 </a>
+      <a href="">Оставить заявку</a>
+      <div class="social-links">
+        <a href=""><img src="../../assets/img/tg.svg" alt=""></a>
+        <a href=""><img src="../../assets/img/instagram.svg" alt=""></a>
+      </div>
+
+    </ul>
+  </nav>
 </header>
 <main>
   <h1>

@@ -40,7 +40,26 @@ import { ScrollSectionDirective } from '../directives/scroll-section.directive';
 export class LandingComponent implements OnInit {
   public buttonSpans = Array(4);
   public headlineSpans = Array(2);
-  screenWidth: number;
+  public screenWidth: number;
+  public activateBurger = false
+  public navList = [
+    {
+      anchor: 'about',
+      label: 'О клубе',
+    },
+    { anchor: 'prices', label: 'Цены' },
+    { anchor: 'equipment', label: 'Характеристики' },
+    { anchor: 'games', label: 'Игры' },
+    { anchor: 'contacts', label: 'Контакты' },
+  ];
+
+  toggleHamburger() {
+    this.activateBurger = !this.activateBurger;
+  }
+
+  disableHamburger() {
+    this.activateBurger = false;
+  }
 
   ngOnInit() {
     this.screenWidth = window.innerWidth;

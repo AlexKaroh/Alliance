@@ -6,7 +6,7 @@
     <div class="info-item" *ngFor="let contact of contacts">
       <img class="img-info" src="{{ contact.url }}" alt="" />
       <span>
-        <span class="label-info">{{ contact.info }}: </span>
+        <span class="label-info">{{ contact.info }}: </span> <br *ngIf="screenWidth < 1024">
         <span class="contact-info">{{ contact.contact }}</span></span
       >
     </div>

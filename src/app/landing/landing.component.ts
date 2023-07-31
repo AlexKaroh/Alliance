@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 import { RouterOutlet, RouterLink } from '@angular/router';
 import { AboutComponent } from '../about/about.component';
 import { PricesComponent } from '../prices/prices.component';
@@ -9,6 +9,7 @@ import { ContactsComponent } from '../contacts/contacts.component';
 import { ScrollAnchorDirective } from '../directives/scroll-anchor.directive';
 import { ScrollManagerDirective } from '../directives/scroll-manager.directive';
 import { ScrollSectionDirective } from '../directives/scroll-section.directive';
+import { LoaderComponent } from '../loader/loader.component';
 @Component({
   selector: 'app-landing',
   standalone: true,
@@ -20,6 +21,7 @@ import { ScrollSectionDirective } from '../directives/scroll-section.directive';
     PricesComponent,
     EquipmentComponent,
     GamesComponent,
+    LoaderComponent,
     ContactsComponent,
     ScrollAnchorDirective,
     ScrollSectionDirective,
@@ -41,7 +43,9 @@ export class LandingComponent implements OnInit {
   public buttonSpans = Array(4);
   public headlineSpans = Array(2);
   public screenWidth: number;
-  public activateBurger = false
+  public activateBurger = false;
+  public isLoading = true;
+  public loadingDelay = false;
   public navList = [
     {
       anchor: 'about',
@@ -66,5 +70,11 @@ export class LandingComponent implements OnInit {
     window.onresize = () => {
       this.screenWidth = window.innerWidth;
     };
+  }
+
+  @HostListener('window:load')
+  onLoad() {
+    this.loadingDelay = true;
+    setTimeout(() => (this.isLoading = false), 1500);
   }
 }

@@ -198,7 +198,7 @@
       &::before {
         position: absolute;
         display: block;
-        content: "";
+        content: '';
         right: 0;
         top: 0;
         width: 80%;
@@ -231,7 +231,7 @@
     margin-right: 20px;
     width: 3rem;
     height: 2rem;
-    z-index: 5;
+    z-index: 15;
     cursor: pointer;
 
     &:hover {
@@ -243,7 +243,7 @@
     span {
       position: absolute;
       display: block;
-      content: "";
+      content: '';
       width: 100%;
       height: 2px;
       background: linear-gradient(180deg, #761ad9, #811cec, #912aff);
@@ -285,11 +285,13 @@
     position: fixed;
     top: 0;
     right: 0;
-    width: 40%;
+    width: 50%;
     height: 100%;
     transition: all 0.5s ease 0s;
     background-color: #000000d0;
     right: -100%;
+    z-index: 10;
+    overflow: hidden;
   }
 
   .hamburger-body.active {
@@ -298,30 +300,45 @@
 
   .hamburger-list {
     flex-direction: column;
-    padding-top: 45px;
+    height: 100%;
     overflow: auto;
     font-size: 2.5rem;
 
-    > a {
-      padding: 1.5rem 0;
-      border-top: 1px solid #ffffff3b;
-      border-bottom: 1px solid #ffffff3b;
-      color: #fff;
-      text-decoration: none;
-      font-size: 2.3rem;
-      text-align: center;
+    .burger-li {
+      display: flex;
+      flex-direction: column;
+      height: 50%;
+      flex: auto 1;
+
+      > li {
+        color: #fff;
+        padding: 1rem 2rem;
+        margin: 1vh 0vh;
+
+        &:first-child {
+          margin-top: 10vh;
+        }
+      }
     }
 
-    > a + a {
-      border-top: none;
-    }
+    .burger-nav {
+      display: flex;
+      flex-direction: column;
+      flex: 1 auto;
 
-    > ul {
-      display: block;
-    }
+      > a {
+        padding: 1.5rem 0;
+        border-top: 1px solid #ffffff3b;
+        border-bottom: 1px solid #ffffff3b;
+        color: #fff;
+        text-decoration: none;
+        font-size: 2.2rem;
+        text-align: center;
+      }
 
-    > li {
-      padding: 1rem 2rem;
+      > a + a {
+        border-top: none;
+      }
     }
   }
 
@@ -331,7 +348,7 @@
     align-items: center;
     padding: 1.5rem 0;
     border-bottom: 1px solid #ffffff3b;
-    border-top: 1px solid #ffffff3b;
+    border-top: none;
 
     > a {
       height: 3rem;
@@ -497,9 +514,37 @@
   .slider-container {
     font-size: 6px;
   }
+
+  .hamburger-list {
+    .burger-li {
+      > li {
+        font-size: 2rem;
+      }
+    }
+
+    .burger-nav {
+      > a {
+        font-size: 2.25rem;
+      }
+    }
+  }
 }
 
 @media (max-width: 467px) {
+  .hamburger-list {
+    .burger-li {
+      > li {
+        font-size: 1.5rem;
+      }
+    }
+
+    .burger-nav {
+      > a {
+        font-size: 1.55rem;
+      }
+    }
+  }
+
   .about-info {
     > h2 {
       font-size: 2.5rem;

@@ -1,77 +1,102 @@
 <!-- eslint-disable @angular-eslint/template/click-events-have-key-events -->
 <!-- eslint-disable @angular-eslint/template/interactive-supports-focus -->
-<header>
-  <img class="logo" src="../../assets/img/logo-logo.svg" alt="" />
-  <nav *ngIf="screenWidth >= 1024">
-    <ul *ngFor="let navItem of navList">
-      <li appScrollAnchor="{{ navItem.anchor }}">{{ navItem.label }}</li>
-    </ul>
-  </nav>
-  <div class="phone" *ngIf="screenWidth >= 1024">
-    <a href="tel:+375445214449">+375 (44) 521-44-49</a>
-  </div>
-  <div class="working-time" *ngIf="screenWidth >= 1024">
-    <span>24/7</span>
-  </div>
-  <div
-    class="hamburger"
-    *ngIf="screenWidth < 1024"
-    [class.active]="activateBurger"
-    (click)="toggleHamburger()"
-  >
-    <span class="line"></span>
-  </div>
-  <nav
-    class="hamburger-body"
-    *ngIf="screenWidth < 1024"
-    [class.active]="activateBurger"
-  >
-    <ul class="hamburger-list" (click)="disableHamburger()">
-      <li
-        *ngFor="let navItem of navList"
-        appScrollAnchor="{{ navItem.anchor }}"
-      >
-        {{ navItem.label }}
-      </li>
-      <a href="tel:+375445214449"> +375 (44) 521-44-49 </a>
-      <a href="">Оставить заявку</a>
-      <div class="social-links">
-        <a href=""><img src="../../assets/img/tg.svg" alt=""></a>
-        <a href=""><img src="../../assets/img/instagram.svg" alt=""></a>
-      </div>
+<app-loader *ngIf="isLoading" [loadingDelay]="loadingDelay"></app-loader>
+<div class="wrapper" [class.blocked]="isLoading">
+  <header>
+    <img class="logo" src="../../assets/img/logo-logo.webp" alt="" />
+    <nav *ngIf="screenWidth >= 1024">
+      <ul>
+        <li
+          *ngFor="let navItem of navList"
+          appScrollAnchor="{{ navItem.anchor }}"
+        >
+          {{ navItem.label }}
+        </li>
+      </ul>
+    </nav>
+    <div class="phone" *ngIf="screenWidth >= 1024">
+      <a href="tel:+375445214449">+375 (44) 521-44-49</a>
+    </div>
+    <div class="working-time" *ngIf="screenWidth >= 1024">
+      <span>24/7</span>
+    </div>
+    <div
+      class="hamburger"
+      *ngIf="screenWidth < 1024"
+      [class.active]="activateBurger"
+      (click)="toggleHamburger()"
+    >
+      <span class="line"></span>
+    </div>
+    <nav
+      class="hamburger-body"
+      *ngIf="screenWidth < 1024"
+      [class.active]="activateBurger"
+    >
+      <ul class="hamburger-list" (click)="disableHamburger()">
+        <div class="burger-li">
+          <li
+            *ngFor="let navItem of navList"
+            appScrollAnchor="{{ navItem.anchor }}"
+          >
+            {{ navItem.label }}
+          </li>
+        </div>
 
-    </ul>
-  </nav>
-</header>
-<main>
-  <h1>
-    <img src="../../assets/img/logo-text.svg" alt="" />
-    <span>Cyber Club</span>
-  </h1>
-  <a class="anchor-button" href="#">
-    <span *ngFor="let spans of buttonSpans"></span>
-    Start to play
-  </a>
-</main>
+        <div class="burger-nav">
+          <a href="tel:+375445214449"> +375 (44) 521-44-49 </a>
+          <a href="">Оставить заявку</a>
+          <div class="social-links">
+            <a href=""><img src="../../assets/img/tg.svg" alt="" /></a>
+            <a href=""><img src="../../assets/img/instagram.svg" alt="" /></a>
+            <a href=""
+              ><img src="../../assets/img/location-map.svg" alt=""
+            /></a>
+          </div>
+        </div>
+      </ul>
+    </nav>
+    <div
+      class="overlay"
+      (click)="disableHamburger()"
+      [class.blocked]="activateBurger"
+      [class.active]="activateBurger"
+    ></div>
+  </header>
+  <main style="display: none">
+    <h1>
+      <img src="../../assets/img/logo-text.webp" alt="" />
+      <span>Cyber Club</span>
+    </h1>
+    <a class="anchor-button" href="#">
+      <span *ngFor="let spans of buttonSpans"></span>
+      Start to play
+    </a>
+  </main>
 
-<app-about appScrollSection="about"></app-about>
+  <app-about appScrollSection="about"></app-about>
 
-<app-prices
-  [headlineSpans]="headlineSpans"
-  [screenWidth]="screenWidth"
-  appScrollSection="prices"
-></app-prices>
+  <app-prices
+    [headlineSpans]="headlineSpans"
+    [screenWidth]="screenWidth"
+    appScrollSection="prices"
+  ></app-prices>
 
-<app-equipment
-  [headlineSpans]="headlineSpans"
-  appScrollSection="equipment"
-></app-equipment>
+  <app-equipment
+    [headlineSpans]="headlineSpans"
+    appScrollSection="equipment"
+  ></app-equipment>
 
-<app-games [headlineSpans]="headlineSpans" appScrollSection="games"></app-games>
+  <app-games
+    [headlineSpans]="headlineSpans"
+    appScrollSection="games"
+  ></app-games>
 
-<app-contacts
-  [headlineSpans]="headlineSpans"
-  appScrollSection="contacts"
-></app-contacts>
+  <app-contacts
+    [screenWidth]="screenWidth"
+    [headlineSpans]="headlineSpans"
+    appScrollSection="contacts"
+  ></app-contacts>
+</div>
 
 <router-outlet></router-outlet>

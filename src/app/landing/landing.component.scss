@@ -1,4 +1,4 @@
-:host {
+.wrapper {
   display: block;
   height: 100vh;
   scroll-behavior: smooth;
@@ -199,4 +199,24 @@ h1 {
   .frame-2 {
     display: block;
   }
+}
+
+.overlay {
+  content: '';
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 7;
+  background-color: #0000006b;
+  transition: 0.3s;
+  opacity: 0;
+  transform: scale(0);
+}
+
+.overlay.active {
+  opacity: 1;
+  transform: scale(1);
 }

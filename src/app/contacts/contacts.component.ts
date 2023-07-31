@@ -11,7 +11,7 @@ import { Contact } from 'src/types/contact.interface';
 })
 export class ContactsComponent {
   @Input() headlineSpans: void[];
-
+  @Input() screenWidth: number;
   public contacts: Contact[] = [
     {
       info: 'Адрес',

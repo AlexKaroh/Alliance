@@ -1,7 +1,7 @@
 <!-- eslint-disable @angular-eslint/template/click-events-have-key-events -->
 <!-- eslint-disable @angular-eslint/template/interactive-supports-focus -->
 <app-loader *ngIf="isLoading" [loadingDelay]="loadingDelay"></app-loader>
-<div class="wrapper" [class.blocked]="isLoading">
+<div class="wrapper" [class.blocked]="!loadingDelay">
   <header>
     <img class="logo" src="../../assets/img/logo-logo.webp" alt="" />
     <nav *ngIf="screenWidth >= 1024">

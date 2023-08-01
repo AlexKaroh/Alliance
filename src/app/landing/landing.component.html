@@ -45,11 +45,11 @@
 
         <div class="burger-nav">
           <a href="tel:+375445214449"> +375 (44) 521-44-49 </a>
-          <a href="">Оставить заявку</a>
+          <a (click)="activateModal()">Оставить заявку</a>
           <div class="social-links">
-            <a href=""><img src="../../assets/img/tg.svg" alt="" /></a>
-            <a href=""><img src="../../assets/img/instagram.svg" alt="" /></a>
-            <a href=""
+            <a href="https://t.me/alliancecyberclub"><img src="../../assets/img/tg.svg" alt="" /></a>
+            <a href="https://instagram.com/alliance_cyber_club"><img src="../../assets/img/instagram.svg" alt="" /></a>
+            <a href="https://yandex.by/maps/-/CXB7e5C"
               ><img src="../../assets/img/location-map.svg" alt=""
             /></a>
           </div>
@@ -63,16 +63,41 @@
       [class.active]="activateBurger"
     ></div>
   </header>
-  <main style="display: none">
+  <main>
     <h1>
       <img src="../../assets/img/logo-text.webp" alt="" />
       <span>Cyber Club</span>
     </h1>
-    <a class="anchor-button" href="#">
+    <a class="anchor-button" (click)="activateModal()">
       <span *ngFor="let spans of buttonSpans"></span>
       Start to play
     </a>
   </main>
+
+  <div [class.activated]="isModalActive" class="modal" (click)="disableModal()">
+    <div class="modal-content" appStopPropagation>
+      <h4>
+        Оставляйте заявку прямо сейчас и вам перезвонят в течении 5 минут!
+      </h4>
+      <form [formGroup]="userDataGroup" (submit)="sendForm()">
+
+        <div class="control">
+          <label class="label" for="name"> Имя </label>
+          <input formControlName="name" id="name" type="text" />
+        </div>
+
+        <div class="control">
+          <label class="label" for="phone"> Номер </label>
+          <input appPhoneFormat formControlName="phone" id="phone" type="text" />
+        </div>
+
+        <button type="submit" class="form-button">
+          <span *ngFor="let spans of buttonSpans"></span>
+          Отправить заявку
+        </button>
+      </form>
+    </div>
+  </div>
 
   <app-about appScrollSection="about"></app-about>
 

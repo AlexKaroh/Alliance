@@ -220,3 +220,105 @@ h1 {
   opacity: 1;
   transform: scale(1);
 }
+
+.modal {
+  height: 100vh;
+  width: 100vw;
+  background-color: #0000007e;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  z-index: 10;
+  pointer-events: none;
+  transition: 0.3s;
+  z-index: -1;
+}
+
+.modal.activated {
+  opacity: 1;
+  z-index: 15;
+  pointer-events: all;
+}
+
+.label {
+  font-family: 'Clickuper';
+  font-size: 2rem;
+  color: var(--text-color-span);
+}
+
+.modal-content {
+  padding: 5rem;
+  width: 35%;
+  background-color: var(--bg-color-modal);
+  border-radius: 0.25rem;
+
+  > h4 {
+    font-family: 'Clickuper';
+    font-size: 2.5rem;
+    color: var(--text-color-h2);
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  outline: none !important;
+
+  input {
+    outline: none;
+    height: 2rem;
+    font-family: 'Clickuper';
+    font-size: 1.75rem;
+    color: var(--text-color-h2);
+    border-radius: 5px;
+    border: none !important;
+    background: #00000088;
+    padding: 1rem;
+    margin: 1rem;
+
+    &:focus {
+      outline: none;
+    }
+  }
+}
+
+.control {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.form-button {
+  background: transparent;
+  cursor: pointer;
+  width: 35%;
+  height: 4rem;
+  border: 1px solid var(--text-color-h1);
+  transition: 0.3s;
+  color: var(--text-color-h1);
+  font-family: 'Clickuper';
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 1.425rem;
+
+  &:hover {
+    background-color: var(--text-color-h1);
+    color: var(--bg-color-modal);
+  }
+}
+
+.ng-touched.ng-invalid {
+  outline: 1px solid #8b1c1c;
+
+  &:focus {
+    box-shadow: 0 0 0 2px #8b1c1c;
+  }
+}

@@ -154,7 +154,11 @@
 }
 
 @media (max-width: 1024px) {
-  :host {
+  .modal-content {
+    width: 70%;
+  }
+
+  .wrapper {
     &::after {
       display: none;
     }
@@ -171,25 +175,24 @@
         }
       }
     }
+  }
+  .prices {
+    height: auto;
 
-    .prices {
-      height: auto;
+    &::before {
+      width: 390px;
+      height: 70px;
+    }
 
+    .separate-tables {
       &::before {
-        width: 390px;
-        height: 70px;
+        height: 22px !important;
       }
+    }
 
-      > .separate-tables {
-        &::before {
-          height: 22px;
-        }
-      }
-
-      > p {
-        margin-top: 60px;
-        font-size: 2.2rem;
-      }
+    > p {
+      margin-top: 60px;
+      font-size: 2.2rem;
     }
 
     .separate-tables {
@@ -198,7 +201,7 @@
       &::before {
         position: absolute;
         display: block;
-        content: "";
+        content: '';
         right: 0;
         top: 0;
         width: 80%;
@@ -226,7 +229,8 @@
     margin: 20px 0;
   }
 
-  .games, .prices {
+  .games,
+  .prices {
     background-attachment: unset;
   }
 
@@ -247,7 +251,7 @@
     span {
       position: absolute;
       display: block;
-      content: "";
+      content: '';
       width: 100%;
       height: 2px;
       background: linear-gradient(180deg, #761ad9, #811cec, #912aff);
@@ -318,6 +322,12 @@
         color: #fff;
         padding: 1rem 2rem;
         margin: 1vh 0vh;
+        cursor: pointer;
+        transition: 0.3s;
+
+        &:hover {
+          color: var(--text-color-p);
+        }
 
         &:first-child {
           margin-top: 10vh;
@@ -338,6 +348,12 @@
         text-decoration: none;
         font-size: 2.2rem;
         text-align: center;
+        cursor: pointer;
+        transition: 0.3s;
+
+        &:hover {
+          color: var(--text-color-p);
+        }
       }
 
       > a + a {
@@ -471,15 +487,15 @@
     &::before {
       display: none;
     }
+  }
 
-    > .separate-tables {
-      &::before {
-        width: 100%;
-      }
+  .separate-tables {
+    &::before {
+      width: 100% !important;
     }
   }
 
-  :host {
+  .wrapper {
     > main {
       h1 {
         &::after {
@@ -499,6 +515,23 @@
 }
 
 @media (max-width: 550px) {
+  .modal-content {
+    > h4 {
+      font-size: 2rem;
+    }
+  }
+
+  .form-button {
+    width: 70%;
+    height: 7rem;
+  }
+
+  form {
+    input {
+      width: 100%;
+    }
+  }
+
   .info-item {
     flex-wrap: wrap;
   }

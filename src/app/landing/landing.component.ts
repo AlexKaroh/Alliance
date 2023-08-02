@@ -22,6 +22,7 @@ import {
 } from '@angular/forms';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { PhoneFormatDirective } from '../directives/phone-format.directive';
+import { Meta } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-landing',
@@ -64,6 +65,7 @@ export class LandingComponent implements OnInit, OnDestroy {
   public isModalActive = false;
   public isLoading = true;
   public loadingDelay = false;
+
   public navList = [
     {
       anchor: 'about',
@@ -74,6 +76,7 @@ export class LandingComponent implements OnInit, OnDestroy {
     { anchor: 'games', label: 'Игры' },
     { anchor: 'contacts', label: 'Контакты' },
   ];
+
   public userDataGroup = this.fb.nonNullable.group({
     name: ['', [Validators.required]],
     phone: [
@@ -85,8 +88,28 @@ export class LandingComponent implements OnInit, OnDestroy {
       ],
     ],
   });
+
   private subscription: Subscription = new Subscription();
-  constructor(private fb: FormBuilder, private http: HttpClient) {}
+
+  constructor(private fb: FormBuilder, private http: HttpClient, private meta: Meta) {}
+
+  ngOnInit() {
+
+    this.meta.updateTag({name: "title", content: "Alliance"})
+
+    this.meta.updateTag({name: "description", content: "г. Минск, метро Уручье, Ложинская 4. Оффициальный сайт компьютерного клуба Alliance в Минске"})
+
+    this.meta.updateTag({name: "image", content: "src/favicon.ico"})
+
+    this.meta.updateTag({name: "keywords", content: "Комьютерый клуб, Комьютерый клуб уручье, Уручье, Компы, ПК клуб уручье, Поиграть уручье"})
+
+    this.meta.updateTag({name: "creator", content: "AlexKaroh"})
+
+    this.screenWidth = window.innerWidth;
+    window.onresize = () => {
+      this.screenWidth = window.innerWidth;
+    };
+  }
 
   sendForm() {
     if (this.userDataGroup.invalid) {
@@ -129,13 +152,6 @@ export class LandingComponent implements OnInit, OnDestroy {
 
   disableHamburger() {
     this.activateBurger = false;
-  }
-
-  ngOnInit() {
-    this.screenWidth = window.innerWidth;
-    window.onresize = () => {
-      this.screenWidth = window.innerWidth;
-    };
   }
 
   @HostListener('window:load')

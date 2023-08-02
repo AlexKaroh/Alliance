@@ -120,9 +120,9 @@ export class LandingComponent implements OnInit, OnDestroy {
     const name = this.userDataGroup.controls.name.value;
     const phone = this.userDataGroup.controls.phone.value;
     const TOKEN = '6021106392:AAEx0RQbhbGMg7KU9cM2Hpq3HH425vk_uvQ';
-    //6342599091
-
-    const CHAT_ID = '1428916942';
+    //main : 6342599091
+    //test: 1428916942
+    const CHAT_ID = '6342599091';
     const data = 'Имя: ' + name + '' + 'Телефон: ' + phone;
     const url = `https://api.telegram.org/bot${TOKEN}/sendMessage?chat_id=${CHAT_ID}&parse_mode=html&text=${data}`;
 
@@ -157,7 +157,7 @@ export class LandingComponent implements OnInit, OnDestroy {
   @HostListener('window:load')
   onPageLoad() {
     this.loadingDelay = true;
-    setTimeout(() => (this.isLoading = false), 1500);
+    setTimeout(() => (this.isLoading = false), 1000);
   }
 
   ngOnDestroy() {

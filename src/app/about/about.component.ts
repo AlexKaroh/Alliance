@@ -2,11 +2,12 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { SlideInterface } from 'src/types/slide.interface';
 import { SliderComponent } from '../slider/slider.component';
+import { ScrollAppearanceDirective } from '../directives/scroll-appearance.directive';
 
 @Component({
   selector: 'app-about',
   standalone: true,
-  imports: [CommonModule, SliderComponent],
+  imports: [CommonModule, SliderComponent, ScrollAppearanceDirective],
   templateUrl: './about.component.html',
   styleUrls: ['./about.component.scss', '../../styles.scss'],
 })

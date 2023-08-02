@@ -1,11 +1,12 @@
 import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { EquipmentItem } from 'src/types/equipment-item.interface';
+import { ScrollAppearanceDirective } from '../directives/scroll-appearance.directive';
 
 @Component({
   selector: 'app-equipment',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, ScrollAppearanceDirective],
   templateUrl: './equipment.component.html',
   styleUrls: ['./equipment.component.scss', '../../styles.scss'],
 })

@@ -1,9 +1,9 @@
 <section class="equipment">
-  <h2 class="header-text glitched">
+  <h2 class="header-text glitched" appScrollAppearance="right">
     <span *ngFor="let spans of headlineSpans">Характеристики</span>
   </h2>
 
-  <div class="equipment-items">
+  <div class="equipment-items" appScrollAppearance>
     <div class="item" *ngFor="let item of equipmentItems">
       <img class="item-img" src="{{ item.url }}" alt="{{ item.device }}" />
       <div class="item-info">

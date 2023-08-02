@@ -1,9 +1,9 @@
 <section class="prices">
-  <h2 class="header-text glitched">
+  <h2 class="header-text glitched" appScrollAppearance="right">
     <span *ngFor="let spans of headlineSpans">Цены</span>
   </h2>
   <table class="prices-table main-table" *ngIf="screenWidth >= 1024">
-    <tbody>
+    <tbody appScrollAppearance>
       <tr class="table-header">
         <td rowspan="2"></td>
         <td colspan="2">Общий зал</td>
@@ -200,7 +200,7 @@
     </table>
   </div>
 
-  <p>
+  <p appScrollAppearance="left">
     К каждому пакету <span>зеленого</span> цвета энергетик
     <span>GORILLA в подарок</span>!
   </p>

@@ -1,11 +1,12 @@
 import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Game } from 'src/types/game.interface';
+import { ScrollAppearanceDirective } from '../directives/scroll-appearance.directive';
 
 @Component({
   selector: 'app-games',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, ScrollAppearanceDirective],
   templateUrl: './games.component.html',
   styleUrls: ['./games.component.scss', '../../styles.scss']
 })

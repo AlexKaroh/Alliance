@@ -9,6 +9,7 @@
   background-position: center top;
   background-attachment: fixed;
   font-family: 'Clickuper';
+  overflow: hidden;
 
   &::before {
     position: absolute;

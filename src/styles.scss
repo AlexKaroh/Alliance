@@ -44,6 +44,24 @@ br {
   }
 }
 
+.fade-in {
+  opacity: 0;
+  transition: all 1s ease-in-out;
+}
+
+.fade-in.show {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.translate-left {
+  transform: translateX(10%);
+}
+
+.translate-right {
+  transform: translateX(-10%);
+}
+
 .header-text {
   &::before {
     position: relative;

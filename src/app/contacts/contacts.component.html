@@ -1,8 +1,8 @@
 <footer class="location">
-  <h2 class="header-text glitched">
+  <h2 class="header-text glitched" appScrollAppearance="right">
     <span *ngFor="let spans of headlineSpans">Контакты</span>
   </h2>
-  <div class="location-list">
+  <div class="location-list" appScrollAppearance="right">
     <div class="info-item" *ngFor="let contact of contacts">
       <a href="{{ contact.href }}"
         ><img class="img-info" src="{{ contact.url }}" alt="social-link"
@@ -14,7 +14,7 @@
       >
     </div>
   </div>
-  <div class="location-map">
+  <div class="location-map" appScrollAppearance="left">
     <iframe
       src="https://yandex.ru/map-widget/v1/?um=constructor%3A41a2aa690be3c1aaee8518ea50afbf29bd39309e07a4e068e9d153ab7a8658f5&amp;source=constructor"
       width="1600"

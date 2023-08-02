@@ -1,11 +1,12 @@
 import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Contact } from 'src/types/contact.interface';
+import { ScrollAppearanceDirective } from '../directives/scroll-appearance.directive';
 
 @Component({
   selector: 'app-contacts',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, ScrollAppearanceDirective],
   templateUrl: './contacts.component.html',
   styleUrls: ['./contacts.component.scss', '../../styles.scss'],
 })

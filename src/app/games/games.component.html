@@ -1,10 +1,10 @@
 <section class="games">
-  <h2 class="header-text glitched">
+  <h2 class="header-text glitched" appScrollAppearance="right">
     <span *ngFor="let spans of headlineSpans">Игры</span>
   </h2>
 
   <div class="games-slider">
-    <div class="game" *ngFor="let game of games">
+    <div class="game" *ngFor="let game of games" appScrollAppearance>
       <img class="game-img" src="{{ game.url }}" alt="{{ game.title }}" />
       <span class="game-name">{{ game.title }}</span>
     </div>

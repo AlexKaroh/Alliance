@@ -139,7 +139,7 @@ export class LandingComponent implements OnInit, OnDestroy {
   }
 
   @HostListener('window:load')
-  onLoad() {
+  onPageLoad() {
     this.loadingDelay = true;
     setTimeout(() => (this.isLoading = false), 1500);
   }

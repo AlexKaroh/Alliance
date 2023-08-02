@@ -75,7 +75,7 @@
   </main>
 
   <div [class.activated]="isModalActive" class="modal" (click)="disableModal()">
-    <div class="modal-content" appStopPropagation>
+    <div class="modal-content" [class.activated]="isModalActive" appStopPropagation>
       <h4>
         Оставляйте заявку прямо сейчас и вам перезвонят в течении 5 минут!
       </h4>

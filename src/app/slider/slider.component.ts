@@ -4,7 +4,6 @@ import {
   HostListener,
   ElementRef,
   ViewChild,
-  OnInit,
 } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { SlideInterface } from 'src/types/slide.interface';
@@ -16,7 +15,7 @@ import { SlideInterface } from 'src/types/slide.interface';
   templateUrl: './slider.component.html',
   styleUrls: ['./slider.component.scss', '../../styles.scss'],
 })
-export class SliderComponent implements OnInit {
+export class SliderComponent {
   @ViewChild('sliderLine', { static: true }) sliderLine: ElementRef;
   @Input() slides: SlideInterface[] = [];
 
@@ -25,15 +24,6 @@ export class SliderComponent implements OnInit {
   currentX = 0;
   defaultTouch = { x: 0, y: 0, time: 0 };
   offset = 0;
-
-  ngOnInit(): void {
-    setTimeout(() => {
-      this.goToPrevious();
-    }, 1000);
-    setTimeout(() => {
-      this.goToNext();
-    }, 2000);
-  }
 
   goToNext() {
     this.offset += 80;

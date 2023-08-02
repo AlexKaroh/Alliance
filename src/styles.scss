@@ -79,7 +79,7 @@ br {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #280049;
+  background-color: #1e0036;
 }
 
 .loader {
@@ -131,4 +131,12 @@ br {
 
 ::-webkit-scrollbar-track-piece {
   background: var(--bg-color-body);
+}
+
+.ymaps-layers-pane {
+	filter: invert(100%);
+	-ms-filter: invert(100%);
+	-webkit-filter: invert(100%);
+	-moz-filter: invert(100%);
+	-o-filter: invert(100%);
 }

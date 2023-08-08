@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, HostListener, OnDestroy, OnInit } from '@angular/core';
+import { AfterViewInit, Component, OnDestroy, OnInit } from '@angular/core';
 import { RouterOutlet, RouterLink } from '@angular/router';
 import { AboutComponent } from '../about/about.component';
 import { PricesComponent } from '../prices/prices.component';
@@ -57,7 +57,7 @@ import { Meta } from '@angular/platform-browser';
     '../../assets/styles/animated-btn.scss',
   ],
 })
-export class LandingComponent implements OnInit, OnDestroy {
+export class LandingComponent implements OnInit, OnDestroy, AfterViewInit {
   public buttonSpans = Array(4);
   public headlineSpans = Array(2);
   public screenWidth: number;
@@ -91,19 +91,35 @@ export class LandingComponent implements OnInit, OnDestroy {
 
   private subscription: Subscription = new Subscription();
 
-  constructor(private fb: FormBuilder, private http: HttpClient, private meta: Meta) {}
+  constructor(
+    private fb: FormBuilder,
+    private http: HttpClient,
+    private meta: Meta
+  ) {}
+
+  ngAfterViewInit() {
+    setTimeout(() => (this.loadingDelay = true), 3500);
+    setTimeout(() => (this.isLoading = false), 4500);
+  }
 
   ngOnInit() {
+    this.meta.updateTag({ name: 'title', content: 'Alliance' });
 
-    this.meta.updateTag({name: "title", content: "Alliance"})
+    this.meta.updateTag({
+      name: 'description',
+      content:
+        'г. Минск, метро Уручье, Ложинская 4. Оффициальный сайт компьютерного клуба Alliance в Минске',
+    });
 
-    this.meta.updateTag({name: "description", content: "г. Минск, метро Уручье, Ложинская 4. Оффициальный сайт компьютерного клуба Alliance в Минске"})
+    this.meta.updateTag({ name: 'image', content: 'src/favicon.ico' });
 
-    this.meta.updateTag({name: "image", content: "src/favicon.ico"})
+    this.meta.updateTag({
+      name: 'keywords',
+      content:
+        'Комьютерый клуб, Комьютерый клуб уручье, Уручье, Компы, ПК клуб уручье, Поиграть уручье',
+    });
 
-    this.meta.updateTag({name: "keywords", content: "Комьютерый клуб, Комьютерый клуб уручье, Уручье, Компы, ПК клуб уручье, Поиграть уручье"})
-
-    this.meta.updateTag({name: "creator", content: "AlexKaroh"})
+    this.meta.updateTag({ name: 'creator', content: 'AlexKaroh' });
 
     this.screenWidth = window.innerWidth;
     window.onresize = () => {
@@ -152,12 +168,6 @@ export class LandingComponent implements OnInit, OnDestroy {
 
   disableHamburger() {
     this.activateBurger = false;
-  }
-
-  @HostListener('window:load')
-  onPageLoad() {
-    this.loadingDelay = true;
-    setTimeout(() => (this.isLoading = false), 1000);
   }
 
   ngOnDestroy() {

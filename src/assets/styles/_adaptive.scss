@@ -154,6 +154,10 @@
 }
 
 @media (max-width: 1024px) {
+  iframe {
+    height: 35vh;
+  }
+
   .modal-content {
     width: 70%;
   }
@@ -324,7 +328,7 @@
     .burger-li {
       display: flex;
       flex-direction: column;
-      height: 50%;
+      height: 75%;
       flex: auto 1;
 
       > li {
@@ -473,6 +477,13 @@
 }
 
 @media (max-width: 636px) {
+  .left-arrow,
+  .right-arrow {
+    > img {
+      width: 50%;
+    }
+  }
+
   .about-info {
     > h2 {
       font-size: 3rem;

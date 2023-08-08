@@ -4,7 +4,7 @@
   flex-direction: column;
   justify-content: space-around;
   min-height: 90vh;
-  padding: 5vh 5vw;
+  padding: 5vh 5vw 2vh 5vw;
   background-color: var(--bg-color-location);
   font-family: 'Clickuper';
   overflow: hidden;
@@ -68,4 +68,14 @@ iframe {
 
 .info-item {
   padding: 1.5rem 0;
+}
+
+.copyright {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 4rem;
+  text-align: center;
+  font-size: 1.725rem;
+  font-family: 'Clickuper';
+  color: var(--text-color-p);
 }

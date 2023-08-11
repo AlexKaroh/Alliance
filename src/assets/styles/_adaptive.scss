@@ -154,6 +154,13 @@
 }
 
 @media (max-width: 1024px) {
+  h1 {
+    > .logo {
+      width: 20vw;
+      padding-bottom: 2rem;
+    }
+  }
+
   iframe {
     height: 35vh;
   }
@@ -220,14 +227,14 @@
     }
   }
 
-  .about {
-    background-position: 20%;
-    background-image: url(../../assets/img/plants-bg-mobile.webp);
-  }
+  // .about {
+  //   background-position: 20%;
+  //   background-image: url(../../assets/img/plants-bg-mobile.webp);
+  // }
 
-  .equipment {
-    background-image: url(../../assets/img/red-plants-mobile.webp);
-  }
+  // .equipment {
+  //   background-image: url(../../assets/img/red-plants-mobile.webp);
+  // }
 
   header {
     display: flex;

@@ -6,11 +6,11 @@
   background: url(../../assets/img/bg_sky.svg) repeat;
   background-position: center top;
   background-attachment: fixed;
-  font-family: "Clickuper";
+  font-family: 'Clickuper';
 
   &::before {
     position: absolute;
-    content: "";
+    content: '';
     top: 0;
     left: 0;
     width: 100%;
@@ -52,6 +52,7 @@
   border-radius: 10px;
   filter: brightness(60%);
   transition: 0.3s;
+  object-fit: cover;
 
   &:hover {
     filter: brightness(100%);

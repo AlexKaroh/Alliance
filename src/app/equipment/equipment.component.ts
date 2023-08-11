@@ -31,7 +31,7 @@ export class EquipmentComponent {
     {
       url: '../../assets/img/icons/ozu.svg',
       device: 'Оперативная память',
-      model: '8GB DDR4',
+      model: '16GB DDR4',
     },
     {
       url: '../../assets/img/icons/mouse.svg',

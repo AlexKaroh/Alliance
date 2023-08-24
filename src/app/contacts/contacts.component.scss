@@ -71,21 +71,9 @@ iframe.map {
 }
 
 .copyright {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
   margin-top: 1.5rem;
   text-align: center;
   font-size: 1.725rem;
   font-family: 'Clickuper';
   color: var(--text-color-p);
-}
-
-.author-link {
-  width: 8rem;
-}
-
-.bumble {
-  width: 8rem;
-  height: 8rem;
 }

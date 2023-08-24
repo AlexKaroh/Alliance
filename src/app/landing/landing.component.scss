@@ -305,6 +305,17 @@ form {
   margin-bottom: 2rem;
 }
 
+.approve {
+  align-items: center;
+  text-align: center;
+}
+
+.label.approve {
+  font-family: 'Clickuper';
+  font-size: 1rem;
+  color: var(--text-color-span);
+}
+
 .form-button {
   background: transparent;
   cursor: pointer;
@@ -317,6 +328,7 @@ form {
   text-decoration: none;
   text-transform: uppercase;
   font-size: 1.425rem;
+  margin-bottom: 2rem;
 
   &:hover {
     background-color: var(--text-color-h1);

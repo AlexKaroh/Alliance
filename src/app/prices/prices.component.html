@@ -1,6 +1,6 @@
 <section class="prices">
   <h2 class="header-text glitched" appScrollAppearance="right">
-    <span *ngFor="let spans of headlineSpans">Цены</span>
+    <span *ngFor="let spans of headlineSpans">Пакеты</span>
   </h2>
   <table class="prices-table main-table" *ngIf="screenWidth >= 1024">
     <tbody appScrollAppearance>
@@ -17,67 +17,54 @@
         <td>Будни</td>
         <td>Выходные</td>
       </tr>
-      <tr class="tr-border">
-        <td>1 Час</td>
-        <td>4</td>
-        <td>5</td>
-        <td></td>
-        <td>5</td>
-        <td>6</td>
-      </tr>
-      <tr class="tr-border">
-        <td class="purple-td">3 Часа</td>
-        <td>10</td>
-        <td>12</td>
-        <td></td>
-        <td class="td-green top-left-border">12</td>
-        <td class="td-green top-right-border">15</td>
-      </tr>
-      <tr class="tr-border">
-        <td>5 Часов</td>
-        <td>15</td>
-        <td>20</td>
-        <td></td>
-        <td class="td-green">20</td>
-        <td class="td-green">25</td>
-      </tr>
       <tr class="plans-td tr-border">
         <td class="purple-td">
-          Утро
-          <span class="plan-time"> (08:00-11:00) </span>
+          Утренний
+          <span class="plan-time"> 08:00-11:00 </span>
         </td>
-        <td class="td-green top-left-border">10</td>
-        <td class="td-green top-right-border">12</td>
+        <td>10</td>
+        <td>10</td>
         <td></td>
-        <td class="td-green">12</td>
-        <td class="td-green">14</td>
+        <td class="td-green top-left-border">12</td>
+        <td class="td-green top-right-border">12</td>
       </tr>
       <tr class="tr-border">
         <td class="purple-td">
-          День
-          <span class="plan-time"> (13:00-18:00) </span>
+          Дневной
+          <span class="plan-time"> 13:00-18:00 </span>
         </td>
-        <td class="td-green">15</td>
-        <td class="td-green">17</td>
+        <td>16</td>
+        <td>16</td>
         <td></td>
         <td class="td-green">18</td>
-        <td class="td-green">22</td>
+        <td class="td-green">18</td>
       </tr>
       <tr class="tr-border">
         <td class="purple-td">
-          Ночь
-          <span class="plan-time"> (22:00-08:00) </span>
+          Ночной
+          <span class="plan-time"> 22:00-08:00 </span>
         </td>
-        <td class="td-green">20</td>
-        <td class="td-green">25</td>
+        <td>20</td>
+        <td>25</td>
         <td></td>
         <td class="td-green">25</td>
         <td class="td-green">30</td>
       </tr>
+      <tr class="tr-border">
+        <td class="purple-td">
+          Ночной +
+          <span class="plan-time"> 20:00-08:00 </span>
+        </td>
+        <td>25</td>
+        <td>30</td>
+        <td> </td>
+        <td class="td-green">30</td>
+        <td class="td-green">35</td>
+      </tr>
       <tr>
         <td class="purple-td">Сутки</td>
-        <td class="td-green bottom-left-border">45</td>
-        <td class="td-green bottom-right-border">45</td>
+        <td class="td-green bottom-left-border top-left-border">45</td>
+        <td class="td-green bottom-right-border top-right-border">45</td>
         <td> </td>
         <td class="td-green bottom-left-border">45</td>
         <td class="td-green bottom-right-border">45</td>
@@ -96,49 +83,42 @@
           <td>Будни</td>
           <td>Выходные</td>
         </tr>
-        <tr class="tr-border">
-          <td>1 Час</td>
-          <td>4</td>
-          <td>5</td>
-        </tr>
-        <tr class="tr-border">
-          <td class="purple-td">3 Часа</td>
-          <td>10</td>
-          <td>12</td>
-        </tr>
-        <tr class="tr-border">
-          <td>5 Часов</td>
-          <td>15</td>
-          <td>20</td>
-        </tr>
         <tr class="plans-td tr-border">
           <td class="purple-td">
-            Утро
-            <span class="plan-time"> (08:00-11:00) </span>
+            Утренний
+            <span class="plan-time"> 08:00-11:00 </span>
           </td>
-          <td class="td-green top-left-border">10</td>
-          <td class="td-green top-right-border">12</td>
+          <td>10</td>
+          <td>10</td>
         </tr>
         <tr class="tr-border">
           <td class="purple-td">
-            День
-            <span class="plan-time"> (13:00-18:00) </span>
+            Дневной
+            <span class="plan-time"> 13:00-18:00 </span>
           </td>
-          <td class="td-green">15</td>
-          <td class="td-green">17</td>
+          <td>16</td>
+          <td>16</td>
         </tr>
         <tr class="tr-border">
           <td class="purple-td">
-            Ночь
-            <span class="plan-time"> (22:00-08:00) </span>
+            Ночной
+            <span class="plan-time"> 22:00-08:00 </span>
           </td>
-          <td class="td-green">20</td>
-          <td class="td-green">25</td>
+          <td>20</td>
+          <td>25</td>
+        </tr>
+        <tr class="tr-border">
+          <td class="purple-td">
+            Ночной +
+            <span class="plan-time"> 20:00-08:00 </span>
+          </td>
+          <td>25</td>
+          <td>30</td>
         </tr>
         <tr>
           <td class="purple-td">Сутки</td>
-          <td class="td-green bottom-left-border">45</td>
-          <td class="td-green bottom-right-border">45</td>
+          <td>45</td>
+          <td>45</td>
         </tr>
       </tbody>
     </table>
@@ -152,44 +132,37 @@
           <td>Будни</td>
           <td>Выходные</td>
         </tr>
-        <tr class="tr-border">
-          <td>1 Час</td>
-          <td>5</td>
-          <td>6</td>
-        </tr>
-        <tr class="tr-border">
-          <td class="purple-td">3 Часа</td>
-          <td class="td-green top-left-border">12</td>
-          <td class="td-green top-right-border">15</td>
-        </tr>
-        <tr class="tr-border">
-          <td>5 Часов</td>
-          <td class="td-green">20</td>
-          <td class="td-green">25</td>
-        </tr>
         <tr class="plans-td tr-border">
           <td class="purple-td">
-            Утро
-            <span class="plan-time"> (08:00-11:00) </span>
+            Утренний
+            <span class="plan-time"> 08:00-11:00 </span>
           </td>
-          <td class="td-green">12</td>
-          <td class="td-green">14</td>
+          <td class="td-green td-green top-left-border">12</td>
+          <td class="td-green td-green top-right-border">12</td>
         </tr>
         <tr class="tr-border">
           <td class="purple-td">
-            День
-            <span class="plan-time"> (13:00-18:00) </span>
+            Дневной
+            <span class="plan-time"> 13:00-18:00 </span>
           </td>
           <td class="td-green">18</td>
-          <td class="td-green">22</td>
+          <td class="td-green">18</td>
         </tr>
         <tr class="tr-border">
           <td class="purple-td">
-            Ночь
-            <span class="plan-time"> (22:00-08:00) </span>
+            Ночной
+            <span class="plan-time"> 22:00-08:00 </span>
           </td>
           <td class="td-green">25</td>
           <td class="td-green">30</td>
+        </tr>
+        <tr class="tr-border">
+          <td class="purple-td">
+            Ночной +
+            <span class="plan-time"> 20:00-08:00 </span>
+          </td>
+          <td class="td-green">30</td>
+          <td class="td-green">35</td>
         </tr>
         <tr>
           <td class="purple-td">Сутки</td>
@@ -204,4 +177,18 @@
     К каждому пакету <span>зеленого</span> цвета энергетик
     <span>GORILLA в подарок</span>!
   </p>
+
+  <h2 class="header-text glitched" appScrollAppearance="right">
+    <span *ngFor="let spans of headlineSpans">Часы</span>
+  </h2>
+
+  <div>
+    <h4 class="purple">Випка</h4>
+    <span class="white">Час</span>
+    <span class="white">Цена</span>
+    <div>
+      <span class="white">1</span>
+      <span class="white">5 <span></span></span>
+    </div>
+  </div>
 </section>

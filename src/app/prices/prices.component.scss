@@ -42,6 +42,7 @@
     color: var(--text-color-p);
     text-align: center;
     margin-top: 40px;
+    margin-bottom: 40px;
 
     > span {
       color: var(--text-color-subs);
@@ -98,25 +99,42 @@ td {
 }
 
 .top-left-border {
-  -webkit-border-top-left-radius: 30px;
-  -moz-border-radius-topleft: 30px;
-  border-top-left-radius: 30px;
+  -webkit-border-top-left-radius: 15px;
+  -moz-border-radius-topleft: 15px;
+  border-top-left-radius: 15px;
 }
 
 .top-right-border {
-  -webkit-border-top-right-radius: 30px;
-  -moz-border-radius-topright: 30px;
-  border-top-right-radius: 30px;
+  -webkit-border-top-right-radius: 15px;
+  -moz-border-radius-topright: 15px;
+  border-top-right-radius: 15px;
 }
 
 .bottom-left-border {
-  -webkit-border-bottom-left-radius: 30px;
-  -moz-border-radius-bottomleft: 30px;
-  border-bottom-left-radius: 30px;
+  -webkit-border-bottom-left-radius: 15px;
+  -moz-border-radius-bottomleft: 15px;
+  border-bottom-left-radius: 15px;
 }
 
 .bottom-right-border {
-  -webkit-border-bottom-right-radius: 30px;
-  -moz-border-radius-bottomright: 30px;
-  border-bottom-right-radius: 30px;
+  -webkit-border-bottom-right-radius: 15px;
+  -moz-border-radius-bottomright: 15px;
+  border-bottom-right-radius: 15px;
+}
+
+.white {
+  color: var(--text-color-span);
+  font-size: 3rem;
+
+  &.white + .white {
+    padding-left: 20px;
+  }
+}
+
+.purple {
+  color: var(--text-color-ptd);
+}
+
+h4 {
+  font-size: 3.5rem;
 }

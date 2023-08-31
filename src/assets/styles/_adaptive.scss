@@ -423,6 +423,21 @@
 }
 
 @media (max-width: 768px) {
+  .hours {
+    flex-direction: column;
+    gap: 80px;
+    align-items: center;
+    padding: 20px 80px 0 80px;
+
+    > .hours-common {
+      align-self: flex-start;
+    }
+
+    > .hours-vip {
+      align-self: flex-end;
+    }
+  }
+
   h1 {
     > img {
       width: 60vw;
@@ -596,6 +611,13 @@
 }
 
 @media (max-width: 467px) {
+  .hours {
+    > .hours-common,
+    > .hours-vip {
+      align-self: unset;
+    }
+  }
+
   .hamburger-list {
     .burger-li {
       > li {

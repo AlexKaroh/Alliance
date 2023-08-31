@@ -4,17 +4,17 @@
   justify-content: space-between;
   position: relative;
   padding: 10vh 5vw;
-  height: 80vh;
+  height: max-content;
   background: url(../../assets/img/bg_sky.svg) repeat;
   background-position: center top;
   background-attachment: fixed;
-  font-family: "Clickuper";
+  font-family: 'Clickuper';
   overflow: hidden;
 
   &::before {
     position: absolute;
     display: block;
-    content: "";
+    content: '';
     left: 0;
     top: -2px;
     width: 440px;
@@ -27,7 +27,7 @@
     &::before {
       position: absolute;
       display: block;
-      content: "";
+      content: '';
       right: 0;
       top: 0;
       width: 80%;
@@ -147,7 +147,7 @@ h4 {
   position: relative;
 
   &::after {
-    content: "";
+    content: '';
     width: 30rem;
     height: 44px;
     display: block;
@@ -179,7 +179,7 @@ h4 {
   position: relative;
 
   &::after {
-    content: "";
+    content: '';
     width: 30rem;
     height: 44px;
     display: block;
@@ -195,7 +195,7 @@ h4 {
   position: relative;
 
   &::after {
-    content: "";
+    content: '';
     width: 32rem;
     height: 100px;
     display: block;
@@ -214,4 +214,9 @@ h4 {
 .hours {
   display: flex;
   justify-content: space-around;
+  padding-top: 20px;
+}
+
+.max-content {
+  width: max-content;
 }

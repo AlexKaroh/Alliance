@@ -125,6 +125,7 @@ header {
     text-decoration: none;
     color: var(--text-color-nav);
     transition: 0.3s;
+    outline: none !important;
 
     &:hover {
       color: var(--text-hover-li);

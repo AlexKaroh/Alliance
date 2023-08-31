@@ -108,7 +108,7 @@ export class LandingComponent implements OnInit, OnDestroy, AfterViewInit {
     this.meta.updateTag({
       name: 'description',
       content:
-        'г. Минск, метро Уручье, Ложинская 4. Оффициальный сайт компьютерного клуба Alliance в Минске',
+        'Оффициальный сайт компьютерного клуба Alliance в Минске метро Уручье, Ложинская 4. БЦ «Порт». Уютное место для игры с друзьями или одному! Найди секретное слово на сайте и получи скидку!',
     });
 
     this.meta.updateTag({ name: 'image', content: 'src/favicon.ico' });
